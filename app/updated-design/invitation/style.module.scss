@@ -1,0 +1,136 @@
+.main_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    .subjectSection {
+      display: flex;
+      align-self: flex-start;
+      flex-direction: column;
+      gap: 16px;
+      .container {
+        position: relative;
+        display: block;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        font-size: 22px;
+        cursor: pointer;
+        user-select: none;
+        .input_group {
+          height: auto;
+        }
+        .inputDiv {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+
+          div {
+            width: 230px;
+            input {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              width: 190px;
+            }
+          }
+        }
+
+        input[type="radio"] {
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 25px;
+          height: 25px;
+          border: 1px solid var(--text-color-4);
+          background: transparent;
+          padding: 4px;
+          border-radius: 50%;
+        }
+
+        input[type="radio"]:checked::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 15px;
+          height: 15px;
+          background-color: var(--text-color-4);
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .messageSection {
+      display: flex;
+      align-self: flex-start;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+  .buttonContainer {
+    align-self: center;
+  }
+}
+
+.color-gray {
+  color: #596170;
+}
+
+@media (max-width: 600px) {
+  .main_div {
+    .formContainer {
+      width: 95%;
+      .subjectSection {
+        max-width: 100%;
+        .container {
+          .inputDiv {
+            div {
+              width: 190px;
+              input {
+                width: 110px;
+              }
+            }
+          }
+        }
+      }
+      .messageSection {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .main_div {
+    max-width: 100%;
+    .formContainer {
+      width: 100%;
+      .subjectSection {
+        max-width: 100%;
+        .container {
+          .inputDiv {
+            flex-direction: column;
+            div {
+              width: 210px;
+              input {
+                width: 160px;
+              }
+            }
+          }
+        }
+      }
+      .messageSection {
+        max-width: 100%;
+      }
+    }
+  }
+}

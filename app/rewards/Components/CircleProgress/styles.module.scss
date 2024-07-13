@@ -1,0 +1,75 @@
+.progressContainer {
+    position: relative;
+    width: 110px;
+    height: 110px;
+  }
+
+  .progressBar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+      #0cf54eaa 0%,
+      #0cf54e var(--progress),
+      #6f6f6f1a var(--progress)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // .circle {
+    //   width: 32px;
+    //   height: 32px;
+    //   z-index: 5;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+
+    //   border-radius: 200px;
+    //   border: 1px solid var(--new_accent, #45d3e8);
+    //   background: #1d1931;
+
+    //   /* blur/blur_120 */
+    //   backdrop-filter: blur(60px);
+
+    //   span {
+    //     /* Body-1/Medium */
+    //     font-family: var(--GilroyMed);
+    //     font-size: 16px;
+    //     font-style: normal;
+    //     font-weight: 400;
+    //     line-height: normal;
+    //     background: var(
+    //       --new_accent,
+    //       linear-gradient(90deg, #45d3e8 0%, #0cf54e 105.38%)
+    //     );
+    //     background-clip: text;
+    //     -webkit-background-clip: text;
+    //     -webkit-text-fill-color: transparent;
+    //   }
+    // }
+  }
+
+  .overlay {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(111, 111, 111, 0.15);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .overlay img {
+    width: 99%;
+    border-radius: 50%;
+    background: radial-gradient(
+        179.5% 60.16% at 50% 100%,
+        #6bc2dd 0%,
+        rgba(16, 94, 112, 0.5) 100%
+      ),
+      #070b11;
+  }

@@ -1,0 +1,878 @@
+.MenuCards {
+  display: flex;
+  flex-direction: column;
+  width: 237px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  .card {
+    width: 237px;
+    height: 189px;
+
+    border-radius: 15px;
+    background: rgba(118, 130, 193, 0.08);
+    backdrop-filter: blur(100px);
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    label {
+      cursor: pointer;
+    }
+    .titleBar {
+      display: flex;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    .titleslideshowContainer {
+      white-space: nowrap;
+      position: relative;
+      width: 100%;
+      min-width: 189px;
+      height: 17px;
+      label {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        transition: opacity 1s ease-in-out;
+        color: #bebebe;
+      }
+      .slideAnimation {
+        opacity: 1;
+      }
+    }
+    .slideshowContainer {
+      white-space: nowrap;
+      position: relative;
+      width: 100%;
+      min-width: 189px;
+      height: 24px;
+      padding: 10px 0;
+      .item {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        transform: translateX(150%);
+        transition: opacity 0.6s ease-in-out, transform 0.8s ease-in-out;
+      }
+      .slideAnimation {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .slideOutAnimation {
+        transform: translateX(-150%);
+      }
+    }
+  }
+
+  .card:hover {
+    background: rgba(118, 130, 193, 0.15);
+  }
+}
+
+.MobileMenu {
+  display: flex;
+  width: 100%;
+  max-width: 327px;
+  padding: 8px;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  background: var(
+    --background-content_bg-content_bg-15,
+    rgba(118, 130, 193, 0.08)
+  );
+  /* blur/blur_100 */
+  backdrop-filter: blur(50px);
+  a {
+    width: 32%;
+    max-width: 98px;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+      color: var(--White-white, #fff);
+      font-family: Jura;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+}
+.seeAll {
+  cursor: pointer;
+}
+.seeAll:hover {
+  text-decoration: underline solid #fff 1px;
+}
+
+.PageCard {
+  display: flex;
+  width: 98%;
+  min-width: max-content;
+
+  // width: 806px;
+
+  // max-height: 599px;
+  height: max-content;
+
+  padding: 24px 12px 6px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 15px;
+  background-color: rgba(118, 130, 193, 0.08);
+  backdrop-filter: blur(50px);
+  margin-left: 16px;
+  position: relative;
+
+  .PageCardBody {
+    max-height: calc(100dvh - 290px);
+    height: 599px;
+    overflow-x: auto;
+    max-width: calc(100dvw - 480px);
+    overflow-y: auto;
+    // min-width: max-content;
+    width: 100%;
+    padding: 0 10px 18px 0;
+  }
+  .pageHeadingRow {
+    display: flex;
+    align-items: center;
+    label {
+      cursor: pointer;
+    }
+    svg {
+      margin-right: 4px;
+      min-width: 24px;
+      max-width: 24px;
+      width: 24px;
+      min-height: 24px;
+      max-height: 24px;
+      height: 24px;
+    }
+  }
+  .pageHeadingRow:hover {
+    label {
+      text-decoration: underline solid #fff 1px;
+    }
+  }
+}
+
+.portfolioBar {
+  position: relative;
+  width: 100%;
+
+  .btm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .valueBar {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.PortbodyCardContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  .left {
+    width: 45%;
+    min-width: 374px;
+    .customCardTop {
+      display: flex;
+      height: 286px;
+      padding: 16px 24px;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-self: stretch;
+      border-radius: 15px;
+      background: rgba(118, 130, 193, 0.15);
+      /* blur/blur_100 */
+      backdrop-filter: blur(50px);
+      .topRow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 19px;
+      }
+      .BtmRow {
+        display: flex;
+        padding: 7px 0px 7.999px 0px;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        align-self: stretch;
+        .details {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          height: max-content;
+          .DRow {
+            display: flex;
+            width: 114px;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+      }
+    }
+    .customCardBtm {
+      display: flex;
+      padding: 24px;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1 0 0;
+      align-self: stretch;
+      border-radius: 15px;
+      background-color: rgba(118, 130, 193, 0.15);
+
+      /* blur/blur_100 */
+      backdrop-filter: blur(50px);
+    }
+  }
+  .right {
+    display: flex;
+    min-width: 374px;
+    width: 55%;
+    margin-left: 5px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 15px;
+    background: rgba(118, 130, 193, 0.15);
+
+    backdrop-filter: blur(50px);
+    .topRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 19px;
+    }
+    .avatarContainer {
+      margin: 0 auto;
+      width: 342px;
+      height: 351.998px;
+      border-radius: 15px;
+      border: 1px solid rgba(160, 247, 255, 0.5);
+      border-radius: 15px;
+
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.2) 100%
+        ),
+        radial-gradient(56.4% 45.45% at 50% 67.66%, #126580 0%, #0a3b4b 100%);
+
+      .avatarCard {
+        width: 100%;
+        height: 100%;
+        background-image: url("/dashboard/avatar.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        border-radius: 15px;
+
+        .BtmBar {
+          position: absolute;
+          bottom: 0;
+          display: flex;
+          width: 342px;
+          height: 102.23px;
+          padding: var(--8, 8px) 16px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: var(--8, 8px);
+          border-radius: 0px 0px 15px 15px;
+          border: 1px solid var(--primary-primary_50, rgba(160, 247, 255, 0.5));
+          background: linear-gradient(
+              0deg,
+              rgba(0, 0, 0, 0.2) 0%,
+              rgba(0, 0, 0, 0.2) 100%
+            ),
+            rgba(118, 130, 193, 0.15);
+
+          /* blur/blur_100 */
+          backdrop-filter: blur(50px);
+
+          .lRow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ReferEarnContainer {
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  width: 100%;
+  .left {
+    min-width: 413px;
+    width: 55%;
+    .top {
+      display: flex;
+      padding: 24px;
+      flex-direction: column;
+      border-radius: 15px;
+      background: rgba(118, 130, 193, 0.15);
+      backdrop-filter: blur(50px);
+      .copyComponent {
+        display: flex;
+        width: 365px;
+        height: 44px;
+        cursor: pointer;
+        position: relative;
+        padding: 10px 16px;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 50px;
+        background: var(
+          --background-content_bg-content_bg-15,
+          rgba(118, 130, 193, 0.15)
+        );
+        label {
+          cursor: pointer;
+        }
+
+        .alert {
+          position: absolute;
+        }
+      }
+    }
+    .btm {
+      display: flex;
+      padding: 24px;
+      flex-direction: column;
+      border-radius: 15px;
+      background: rgba(118, 130, 193, 0.15);
+      backdrop-filter: blur(50px);
+    }
+  }
+  .right {
+    display: flex;
+    width: 45%;
+    margin-left: 5px;
+    padding: 24px;
+    flex-direction: column;
+    border-radius: 15px;
+    background: rgba(118, 130, 193, 0.15);
+    backdrop-filter: blur(50px);
+    min-width: 335px;
+  }
+}
+
+.StakePoolContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .valueBar {
+    display: flex;
+    align-items: center;
+    width: max-content;
+  }
+  .left {
+    min-width: 374px;
+    width: 50%;
+    .top {
+      display: flex;
+      padding: 24px;
+      flex-direction: column;
+      border-radius: 15px;
+      background: rgba(118, 130, 193, 0.15);
+      backdrop-filter: blur(50px);
+    }
+    .mid {
+      display: flex;
+      padding: 24px;
+      flex-direction: column;
+      border-radius: 15px;
+      background: rgba(118, 130, 193, 0.15);
+      backdrop-filter: blur(50px);
+    }
+    .btm {
+      display: flex;
+      padding: 24px;
+      height: 280px;
+      flex-direction: column;
+      border-radius: 15px;
+      background: rgba(118, 130, 193, 0.15);
+      backdrop-filter: blur(50px);
+      justify-content: space-between;
+      .poolBtn {
+        width: 108px;
+        height: 37px;
+        border-radius: 10px;
+        background: #58deea;
+        box-shadow: 0px 4px 18.6px 0px rgba(0, 0, 0, 0.25);
+        color: #07152f;
+        text-align: center;
+        border: none;
+        /* Body-2/Semi-bold */
+        font-family: Jura;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-left: 24px;
+        overflow: hidden;
+        position: relative;
+        span {
+          z-index: 20;
+        }
+
+        &:after {
+          background: #fff;
+          content: "";
+          // height: 45px;
+          height: 45px;
+
+          left: -20px;
+          opacity: 0.2;
+          position: absolute;
+          top: -5px;
+          transform: rotate(35deg);
+          transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+          width: 10px;
+          // z-index: -10;
+        }
+      }
+      .poolBtn:hover {
+        &:after {
+          left: 120%;
+          transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+      }
+    }
+  }
+  .right {
+    min-width: 374px;
+    width: 50%;
+    margin-left: 5px;
+    .top {
+      display: flex;
+      padding: 24px;
+      flex-direction: column;
+      border-radius: 15px;
+      background: rgba(118, 130, 193, 0.15);
+      backdrop-filter: blur(50px);
+    }
+
+    .btm {
+      display: flex;
+      padding: 24px;
+      height: 391px;
+      flex-direction: column;
+      border-radius: 15px;
+      background: rgba(118, 130, 193, 0.15);
+      backdrop-filter: blur(50px);
+    }
+  }
+}
+
+.RankContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .left {
+    min-width: 324px;
+    width: 45%;
+    .top {
+      display: flex;
+      padding: 24px;
+      flex-direction: column;
+      border-radius: 15px;
+      background: rgba(118, 130, 193, 0.15);
+      backdrop-filter: blur(50px);
+    }
+
+    .btm {
+      display: flex;
+      padding: 24px;
+      flex-direction: column;
+      border-radius: 15px;
+      background: rgba(118, 130, 193, 0.15);
+      backdrop-filter: blur(50px);
+    }
+  }
+
+  .right {
+    min-width: 425px;
+    width: 55%;
+    margin-left: 5px;
+    .top {
+      display: flex;
+      padding: 24px;
+      flex-direction: column;
+      border-radius: 15px;
+      background: rgba(118, 130, 193, 0.15);
+      backdrop-filter: blur(50px);
+    }
+
+    .btm {
+      display: flex;
+      padding: 24px;
+      flex-direction: column;
+      border-radius: 15px;
+      background: rgba(118, 130, 193, 0.15);
+      backdrop-filter: blur(50px);
+    }
+  }
+}
+
+.btn {
+  width: 100px;
+  height: 37px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    #228aa1 0%,
+    #68dced 99.81%,
+    #0fc870 230.16%,
+    #5bf4ab 298.91%
+  );
+  text-align: center;
+  /* Body-2/Semi-bold */
+  font-family: Jura;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  // overflow: hidden;
+
+  overflow: hidden;
+  position: relative;
+
+  span {
+    z-index: 20;
+  }
+
+  &:after {
+    background: #fff;
+    content: "";
+    // height: 45px;
+    height: 45px;
+
+    left: -20px;
+    opacity: 0.2;
+    position: absolute;
+    top: -5px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 10px;
+    // z-index: -10;
+  }
+}
+
+.btn:hover {
+  &:after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
+.linkBtn {
+  display: flex;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background: rgba(118, 130, 193, 0.15);
+  cursor: pointer;
+
+  label {
+    cursor: pointer;
+  }
+  svg {
+    margin-left: 10px;
+    min-width: 17px;
+    max-width: 17px;
+    width: 17px;
+    min-height: 17px;
+    max-height: 17px;
+    height: 17px;
+  }
+}
+.linkBtn:hover {
+  label {
+    text-decoration: underline solid #fff 1px;
+  }
+}
+@media (max-width: 1150px) {
+}
+@media (max-width: 850px) {
+  .PageCard {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    max-height: 100%;
+    margin-left: 0;
+    position: relative;
+    min-width: 100%;
+  }
+
+  .portfolioBar {
+    .btm {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      .valueBar {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+    }
+  }
+  .PortbodyCardContainer {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    position: relative;
+    margin: 0 auto;
+    .left {
+      width: 100%;
+      min-width: 250px;
+      max-width: 300px;
+
+      .customCardTop {
+        display: flex;
+        height: 181px;
+        padding: 16px;
+        max-width: 100%;
+
+        .topRow {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          height: 19px;
+        }
+        .BtmRow {
+          display: flex;
+          flex-direction: row-reverse;
+          padding: 0;
+          justify-content: space-between;
+          align-items: center;
+
+          align-self: stretch;
+        }
+      }
+      .customCardBtm {
+        padding: 16px;
+      }
+    }
+    .right {
+      display: flex;
+      width: 100%;
+      min-width: 250px;
+
+      max-width: 300px;
+      margin: 0 auto;
+
+      position: relative;
+      padding: 16px;
+      .topRow {
+        width: 100%;
+      }
+      .avatarContainer {
+        width: 100%;
+        height: 317px;
+        position: relative;
+        .avatarCard {
+          .BtmBar {
+            width: 100%;
+            max-width: 100%;
+            height: 133px;
+            // position: relative;
+
+            .lRow {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+              align-self: stretch;
+              .btnCon {
+                width: 100%;
+              }
+              button {
+                margin-top: 8px;
+                width: 100%;
+                min-width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .ReferEarnContainer {
+    flex-direction: column-reverse;
+    // justify-content: space-between;
+    width: 100%;
+    .left {
+      min-width: 100%;
+      width: 100%;
+      .top {
+        padding: 16px;
+        .copyComponent {
+          width: 100%;
+          label {
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .alert {
+            position: absolute;
+          }
+        }
+      }
+      .btm {
+        padding: 16px;
+      }
+    }
+    .right {
+      width: 100%;
+      margin-left: 0px;
+      padding: 16px;
+      min-width: 100%;
+      margin-bottom: 16px;
+      img {
+        max-width: 100%;
+        max-height: 267px;
+      }
+    }
+  }
+  .StakePoolContainer {
+    flex-direction: column;
+    .valueBar {
+      display: flex;
+
+      align-items: center;
+      width: max-content;
+    }
+    .left {
+      min-width: 260px;
+      width: 100%;
+      .top {
+        padding: 16px;
+      }
+      .mid {
+        padding: 16px;
+      }
+      .btm {
+        padding: 16px;
+        height: max-content;
+        .poolBtn {
+          width: max-content;
+          padding: 10px;
+          height: max-content;
+          background: transparent;
+          box-shadow: none;
+          color: #58deea;
+          text-align: center;
+          border: none;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+    .right {
+      min-width: 260px;
+      width: 100%;
+      margin-left: 0px;
+      .top {
+        padding: 16px;
+      }
+
+      .btm {
+        padding: 16px;
+        height: max-content;
+        flex-direction: column;
+      }
+    }
+  }
+  .RankContainer {
+    flex-direction: column;
+    .left {
+      min-width: 260px;
+      width: 100%;
+      .top {
+        padding: 16px;
+      }
+
+      .btm {
+        padding: 16px;
+      }
+    }
+
+    .right {
+      min-width: 260px;
+      width: 100%;
+      margin-left: 0px;
+      .top {
+        padding: 16px;
+      }
+
+      .btm {
+        padding: 16px;
+      }
+    }
+  }
+
+  .linkBtn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-height: 840px) {
+  .MenuCards {
+    width: 237px;
+    height: calc(100dvh - 250px);
+    position: relative;
+    .card {
+      width: 230px;
+      min-height: max-content;
+      height: 32%;
+      border-radius: 15px;
+      padding: 20px 20px 12px 24px;
+      position: relative;
+      .titleBar {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

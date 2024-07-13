@@ -1,0 +1,17 @@
+{
+    "data": [
+        {
+            "title": "Refer",
+            "link": "/refer-earn/refer"
+        },
+        {
+            "title": "Earn",
+            "link": "/refer-earn/earn"
+        },
+        {
+            "title": "Invited",
+            "link": "/refer-earn/invited"
+        }
+       
+    ]
+}

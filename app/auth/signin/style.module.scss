@@ -1,0 +1,202 @@
+.cardContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .left {
+    width: 451px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .heading {
+      //styleName: Title-2/Semi-bold;
+      font-family: var(--GilroyMed);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      color: #fff;
+    }
+    form {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      .forgotPwdLbl {
+        //styleName: Body-1/Medium;
+        font-family: var(--Gilroy);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.41px;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 32px;
+        margin-top: 4px;
+        a {
+          text-decoration: none;
+          color: rgba(211, 118, 255, 1);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .center {
+    width: 19px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 24px;
+    .topDivider {
+      width: 1px;
+      height: 48%;
+      min-height: 141px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+    label {
+      font-family: var(--Gilroy);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.41px;
+      text-align: center;
+      margin: 16px 0;
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 48px;
+    width: 452px;
+    position: relative;
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 32px 0;
+      .topDivider {
+        width: 79px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.3);
+      }
+      label {
+        font-family: var(--Gilroy);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.41px;
+        text-align: center;
+        margin: 0 16px;
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+    .socialLink:hover {
+      filter: brightness(10);
+    }
+    .socialLink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 290px;
+      height: 56px;
+      padding: 16px 24px 16px 24px;
+      border-radius: 50px;
+      // border: 1px solid var(--greenCardStroke, rgba(81, 92, 106, 1));
+      // background: rgba(137, 137, 234, 0.05);
+      border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.5));
+      background: var(
+        --background-content_bg-content_bg_3,
+        rgba(137, 137, 234, 0.03)
+      );
+      cursor: pointer;
+      label {
+        font-family: var(--Gilroy);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.41px;
+        text-align: center;
+        // color: #fff;
+        color: var(--White-white_30, rgba(255, 255, 255, 0.8));
+        margin-left: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 1066px) {
+  .cardContent {
+    width: 95dvw;
+    .left {
+      width: 45dvw;
+    }
+    .right {
+      padding: 0 0px;
+      width: 40dvw;
+    }
+    .center {
+      width: 19px;
+      margin: 0 12px;
+    }
+  }
+}
+@media (max-width: 786px) {
+  .cardContent {
+    width: 100%;
+    flex-direction: column;
+    .left {
+      width: 100%;
+      .heading {
+        font-size: 20px;
+      }
+      form {
+        margin-top: 24px;
+        .forgotPwdLbl {
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    .center {
+      width: 100%;
+      height: 19px;
+
+      flex-direction: row;
+      margin: 24px 0;
+      justify-content: center;
+      .topDivider {
+        width: 79px;
+        height: 1px;
+        min-height: 1px;
+      }
+      label {
+        margin: 0 16px;
+      }
+    }
+    .right {
+      padding: 0 0;
+      width: 100%;
+
+      .divider {
+        display: none;
+      }
+      .socialLink {
+        width: 100%;
+        height: 56px;
+        padding: 13px 24px 13px 24px;
+        margin-bottom: 24px;
+        label {
+          font-size: 14px;
+          line-height: 15.41px;
+          margin-left: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

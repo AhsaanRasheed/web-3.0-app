@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "title": "Overview",
+      "link": "/NewPortfolio/overview"
+    },
+    {
+      "title": "Allocation",
+      "link": "/NewPortfolio/allocation"
+    },
+    {
+      "title": "NFT",
+      "link": "/NewPortfolio/nft"
+    },
+    {
+      "title": "Transaction",
+      "link": "/NewPortfolio/transaction"
+    }
+  ]
+}

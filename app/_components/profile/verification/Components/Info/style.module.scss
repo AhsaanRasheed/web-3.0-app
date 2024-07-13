@@ -1,0 +1,65 @@
+.row {
+  // Your existing styles for row
+  .text_head {
+    min-width: 120px;
+  }
+}
+
+.container {
+  position: relative;
+  display: block;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  font-size: 22px;
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border: 1px solid var(--text-color-4);
+    border-radius: 50%;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 15%;
+      left: 15%;
+      width: 60%;
+      height: 60%;
+      border-radius: 50%;
+      border: 1px solid var(--text-color-4);
+      background-color: var(--text-color-4);
+    }
+  }
+
+  &:hover input ~ .checkmark {
+    border: 1px solid var(--text-color-4);
+  }
+
+  input:checked ~ .checkmark {
+    border: 1px solid var(--text-color-4);
+
+    &:after {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+    .text_head {
+      min-width: 90px;
+    }
+  }
+}

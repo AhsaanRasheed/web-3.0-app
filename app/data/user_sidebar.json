@@ -1,0 +1,89 @@
+{
+  "logoUrl": "/logo-1.svg",
+  "menus": [
+    {
+      "title": "MAIN MENU",
+      "list": [
+        {
+          "itemName": "Dashboard",
+          "itemIconUrl": "/sidebar/dashboard.svg",
+          "itemIconUrlSelected": "/sidebar/dashboard_b.svg",
+
+          "itemUrl": "/dashboard"
+        },
+        {
+          "itemName": "Portfolio",
+          "itemIconUrl": "/sidebar/portfolio.svg",
+          "itemIconUrlSelected": "/sidebar/portfolio_b.svg",
+
+          "itemUrl": "/portfolio"
+        },
+        {
+          "itemName": "Refer & Earn",
+          "itemIconUrl": "/sidebar/refer.svg",
+          "itemIconUrlSelected": "/sidebar/refer_b.svg",
+
+          "itemUrl": "/refer-earn"
+        },
+        {
+          "itemName": "Staking",
+          "itemIconUrl": "/sidebar/staking.svg",
+          "itemIconUrlSelected": "/sidebar/staking_b.svg",
+
+          "itemUrl": "/staking"
+        },
+        {
+          "itemName": "Lucky Airdrops",
+          "itemIconUrl": "/sidebar/airdrop.svg",
+          "itemIconUrlSelected": "/sidebar/airdrop_b.svg",
+
+          "itemUrl": "/airdrop"
+        },
+        {
+          "itemName": "Ranking",
+          "itemIconUrl": "/sidebar/ranking.svg",
+          "itemIconUrlSelected": "/sidebar/ranking_b.svg",
+
+          "itemUrl": "/ranking"
+        },
+        {
+          "itemName": "TVL",
+          "itemIconUrl": "/sidebar/tvl.svg",
+          "itemIconUrlSelected": "/sidebar/tvl_b.svg",
+
+          "itemUrl": "/tvl"
+        },
+        {
+          "itemName": "My Profile",
+          "itemIconUrl": "/sidebar/profile.svg",
+          "itemIconUrlSelected": "/sidebar/profile_b.svg",
+
+          "itemUrl": "/profile"
+        }
+      ]
+    },
+    {
+      "title": "LEARN & EARN",
+      "list": [
+        {
+          "itemName": "PrimeBirdy",
+          "itemIconUrl": "/sidebar/news.svg",
+          "itemIconUrlSelected": "/sidebar/news.svg",
+
+          "itemUrl": "/news"
+        }
+      ]
+    },
+    {
+      "title": null,
+      "list": [
+        {
+          "itemName": "Sign Out",
+          "itemIconUrl": "/sidebar/signOut.svg",
+          "itemIconUrlSelected": "/sidebar/signOut.svg",
+          "itemUrl": "/sign-out"
+        }
+      ]
+    }
+  ]
+}

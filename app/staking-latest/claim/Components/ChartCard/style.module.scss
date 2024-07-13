@@ -1,0 +1,156 @@
+.cardContainer {
+  min-width: 460px;
+  min-height: 300px;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px 2px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    177.94deg,
+    rgba(36, 158, 245, 0.33) 3.73%,
+    rgba(36, 158, 245, 0) 94.81%
+  );
+  position: relative;
+  gap: 15px;
+  padding: 0 15px;
+}
+
+.cardItem {
+  margin: 20px 0 0 0;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.dropdownContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.chartContainer {
+  margin-bottom: 20px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .chart {
+    &.lineChart {
+      min-width: 100%;
+      min-height: 280px;
+      width: 100%;
+      height: 280px;
+
+      div {
+        min-width: 440px;
+        width: 100%;
+      }
+    }
+
+    &.donutChart {
+      max-width: 240px;
+      width: 240px;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    align-self: flex-end;
+  }
+}
+@media (max-width: 1375px) {
+  .cardContainer {
+    // min-width: 375px;
+    width: max-content;
+  }
+}
+// @media (max-width: 600px) {
+//   .cardContainer {
+//     // min-width: 375px;
+//     width: 100%;
+//     min-width: 100%;
+//     align-items: center;
+//     min-height: 340px;
+//     padding: 0 0px;
+//   }
+
+//   .cardItem {
+//     flex-direction: column;
+//     width: 100%;
+//     gap: 4px;
+
+//     .title {
+//       align-self: flex-start;
+//     }
+//     .dropdownContainer {
+//       align-self: flex-end;
+//     }
+//   }
+//   .chartContainer {
+//     flex-direction: column;
+//     align-items: center;
+//     width: 100%;
+//     gap: 8px;
+
+//     .chart {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+
+//       &.lineChart {
+//         min-width: 300px;
+//         width: 100%;
+//         div {
+//           min-width: 300px;
+//           width: 100%;
+//         }
+//       }
+//     }
+//   }
+//   .info {
+//     align-items: end !important;
+//   }
+// }
+
+@media (max-width: 600px) {
+  .cardContainer {
+    min-width: 87dvw;
+    width: 87dvw;
+    max-width: 87dvw;
+
+    min-height: max-content;
+  }
+  .chartContainer {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+
+    max-height: max-content;
+
+    .chart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-height: max-content;
+      &.lineChart {
+        min-width: 270px;
+        width: 100%;
+        max-height: max-content;
+        min-height: max-content;
+        height: max-content;
+        div {
+          min-width: 270px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

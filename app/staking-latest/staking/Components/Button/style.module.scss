@@ -1,0 +1,77 @@
+.button_div {
+  align-self: center;
+  .button {
+    width: 446px;
+    cursor: pointer;
+    height: 51px;
+    width: 184px;
+    border: none; 
+    border-radius: 50px;
+    box-shadow: 0px 4px 27px 0px #12658040, 0px 4px 97px 0px #12658040,
+      0px 4px 195px 0px #12658040;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Jura";
+    font-weight: 700;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .button_disabled {
+    color: #606262;
+    background: linear-gradient(90deg, #223c46 0%, #285552 100%);
+    box-shadow: none;
+  }
+
+  .button_active {
+    position: relative;
+    overflow: hidden;
+    span {
+      position: relative;
+      z-index: 12;
+    }
+  }
+  .button_active:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-image: linear-gradient(
+      130deg,
+      #228aa1 -53.26%,
+      #68dced -34.2%,
+      #5bf4ab 0.86%,
+      #0fc870 100%
+    );
+
+    transform: translateX(100%); /* Initially move it off-screen */
+    transition: transform 0.1s ease-in-out;
+  }
+  .button_active:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+      90deg,
+      #228aa1 0%,
+      #68dced 99.81%,
+      #0fc870 230.16%,
+      #5bf4ab 298.91%
+    );
+
+    transform: translateX(0%);
+    transition: transform 0.1s ease-in-out;
+  }
+  .button_active:hover:before {
+    transform: translateX(0%);
+  }
+  .button_active:hover:after {
+    transform: translateX(-100%);
+  }
+}

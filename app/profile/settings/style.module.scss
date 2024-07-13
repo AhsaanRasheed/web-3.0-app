@@ -1,0 +1,296 @@
+.mainCard {
+  width: 100%;
+  min-height: 660px;
+  padding: 24px;
+  border-radius: 24px;
+
+  border: 2px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+  background-color: transparent;
+}
+// Gilroy
+// GilroyMed
+// GilroySemiBold
+.titleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  .titletxt {
+    font-family: var(--GilroySemiBold);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.5px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .editBtn {
+    display: flex;
+    width: 100px;
+    height: 38px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+    background: var(
+      --background-content_bg-content_bg-5,
+      rgba(137, 137, 234, 0.05)
+    );
+    padding: 0 16px;
+    cursor: pointer;
+    label {
+      color: var(--White-white, #fff);
+      text-align: center;
+      font-family: Jura;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      cursor: pointer;
+    }
+    svg {
+      min-width: 25px;
+      min-height: 24px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.infoCard {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+  background: var(
+    --background-content_bg-content_bg-5,
+    rgba(137, 137, 234, 0.05)
+  );
+  padding: 32px;
+  /* blur/blur_120 */
+  backdrop-filter: blur(60px);
+}
+
+.topSec {
+  .secTitle {
+    color: var(--White-white, #fff);
+    text-align: center;
+
+    /* Title-3/Semi-bold */
+    font-family: var(--GilroySemiBold);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .secTitleEdit {
+    color: var(--White-white, #fff);
+    text-align: center;
+
+    /* Title-3/Semi-bold */
+    font-family: Jura;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .rowCol {
+    display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: space-between;
+    width: 100%;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: -18px;
+
+    // .col {
+    //   margin-top: 24px;
+
+    //   display: flex;
+    //   align-items: center;
+    .row {
+      display: flex;
+      align-items: center;
+      width: calc(33.3% - 64px);
+      min-width: calc(33.3% - 64px);
+      margin-right: 64px;
+
+      padding: 10px 0;
+      min-height: 39px;
+      margin-top: 24px;
+
+      .key {
+        width: 132px;
+        min-width: 132px;
+        color: var(--White-white_50, rgba(255, 255, 255, 0.5));
+
+        /* Body-1/Medium */
+        font-family: var(--GilroyMed);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .value {
+        color: var(--White-white, #fff);
+        text-align: center;
+
+        /* Body-1/Medium */
+        font-family: var(--GilroyMed);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+     
+      //   }
+    }
+  }
+}
+.btnCon {
+  width: 269px;
+  margin: 0 auto;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--new_input_stroke, rgba(111, 111, 111, 0.25));
+  margin: 36px 0;
+}
+
+.editForm {
+  margin-top: 32px;
+  .topSec {
+    .secTitle {
+      font-size: 16px;
+    }
+    .rowCol {
+      margin-top: 12px;
+      .row {
+        display: flex;
+        align-items: center;
+        width: calc(33.3% - 36px);
+        min-width: calc(33.3% - 36px);
+        max-width: calc(33.3% - 36px);
+
+        margin-right: 36px;
+        position: relative;
+        padding: 0;
+        min-height: 39px;
+        margin-top: 12px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .mainCard {
+    min-height: max-content;
+    padding: 16px;
+  }
+  .titleBar {
+    margin-bottom: 16px;
+
+    .editBtn {
+      padding: 0 10px;
+      label {
+        color: var(--White-white, #fff);
+        text-align: center;
+        font-family: Jura;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        cursor: pointer;
+      }
+      svg {
+        min-width: 25px;
+        min-height: 24px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+  .infoCard {
+    padding: 16px;
+  }
+  .topSec {
+    .secTitle {
+      margin-bottom: 16px;
+      display: flex;
+      font-family: var(--GilroyMed);
+    }
+    .rowCol {
+      justify-content: space-between;
+      .emptyrow {
+        display: none;
+      }
+      .row {
+        width: calc(50% - 8px);
+        min-width: calc(50% - 8px);
+        max-width: calc(50% - 8px);
+        position: relative;
+        margin-right: 0;
+        padding: 0;
+        // margin: 0 2px;
+        min-height: 39px;
+        margin-top: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        white-space: nowrap;
+        // overflow: hidden;
+        text-overflow: ellipsis;
+        .key {
+          width: 100%;
+          min-width: 100%;
+          font-size: 14px;
+          font-family: var(--GilroySemiBold) !important;
+        }
+        .value {
+          font-family: var(--GilroySemiBold) !important;
+          font-size: 14px;
+          text-align: left;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%;
+        }
+        //   }
+      }
+    }
+  }
+  .editForm {
+    margin-top: 32px;
+    .topSec {
+      .secTitle {
+        font-size: 16px;
+        font-family: var(--GilroyMed);
+      }
+      .rowCol {
+        margin-top: 12px;
+        .row {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
+  
+          margin-right: 0;
+          position: relative;
+          padding: 0;
+          min-height: 39px;
+          margin-top: 12px;
+        }
+        .emptyrow{
+          display: none;
+        }
+      }
+    }
+  }
+  .divider {
+    margin: 24px 0;
+  }
+}

@@ -1,0 +1,348 @@
+.inviteCardcon {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  // gap: 24px;
+  // flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 15px;
+  background: var(
+    --background-content_bg-content_bg-5,
+    rgba(137, 137, 234, 0.05)
+  );
+
+  /* blur/blur_100 */
+  backdrop-filter: blur(50px);
+  margin-top: 24px;
+  .MobDropArrow {
+    display: none;
+  }
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  label {
+    color: var(--White-white, #fff);
+
+    /* Body-1/Bold */
+    font-family: var(--GilroySemiBold);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 16px;
+  }
+}
+
+.body {
+  width: 100%;
+  .top {
+    margin-top: 16px;
+    width: 100%;
+    margin-bottom: 24px;
+    label {
+      color: var(--White-white, #fff);
+
+      /* Body-2/Regular */
+      font-family: var(--Gilroy);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .btm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .left {
+      width: 50%;
+      min-width: 400px;
+      max-width: 493px;
+      margin-right: 32px;
+      .inputCon {
+        width: 100%;
+      }
+      .btnCon {
+        width: 201px;
+        margin-top: 8px;
+      }
+    }
+    .leftEmailNull {
+      // width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .right {
+      // flex-grow: 1;
+      width: max-content;
+      height: 100%;
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1px;
+      min-width: 0;
+      // transition: all 1s ease-in;
+      visibility: hidden;
+
+      .rightTitle {
+        color: var(--Primary-Neutrals-strong, var(--Neutral-Strong, #d9dee8));
+        text-align: left;
+
+        /* Body-1/Regular */
+        font-family: var(--Gilroy);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0 4px 16px 4px;
+      }
+      .noEmail {
+        color: var(--White-white_30, rgba(255, 255, 255, 0.3));
+        text-align: left;
+
+        /* Body-1/Regular */
+        font-family: var(--Gilroy);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .emailCard {
+        display: flex;
+        padding: var(--8, 8px);
+        align-items: center;
+        border-radius: 4px;
+        background: var(
+          --background-content_bg-content_bg-5,
+          rgba(137, 137, 234, 0.05)
+        );
+        margin: 0 4px 16px 4px;
+        label {
+          color: var(--White-white, #fff);
+
+          /* Body-2/medium */
+          font-family: var(--GilroyMed);
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100%; /* 14px */
+        }
+        svg {
+          margin-left: 4px;
+        }
+      }
+      .moreLbl {
+        display: flex;
+        align-items: center;
+        color: var(--Primary-Neutrals-strong, var(--Neutral-Strong, #d9dee8));
+        text-align: center;
+        cursor: pointer;
+        /* Body-1/Regular */
+        font-family: var(--Gilroy);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0 4px 16px 4px;
+      }
+      .moreLbl label {
+        cursor: pointer;
+      }
+      .moreLbl svg {
+        cursor: pointer;
+        min-width: 20px;
+        min-height: 20px;
+      }
+      .moreLbl:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+    .rightEmailNull {
+      animation: leftWidthCloseanimation 1s;
+      max-width: 1px;
+      min-width: 0;
+
+      visibility: hidden;
+    }
+    .rightEmailNotNull {
+      animation: leftWidthOpenanimation 1s;
+      visibility: visible;
+      min-width: calc(100% - 493px);
+      max-width: calc(100% - 493px);
+      width: calc(100% - 493px);
+    }
+
+    // animation: btmanimation 1s ease-in;
+  }
+  .widthfullBtm {
+    // animation: btmWidthanimation 1s;
+    // width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .inviteCardcon {
+    padding: 16px;
+    margin-top: 16px;
+    position: relative;
+    max-height: 102px;
+    overflow: hidden;
+    .MobDropArrow {
+      display: block;
+      position: absolute;
+      right: 24px;
+      top: 27px;
+    }
+  }
+  .topBar {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+    label {
+      color: var(--White-white, #fff);
+      font-size: 14px;
+      margin-left: 0;
+      margin-top: 13px;
+    }
+  }
+
+  .body {
+    width: 100%;
+    visibility: hidden;
+    .top {
+      margin-top: 16px;
+      width: 100%;
+      margin-bottom: 16px;
+      label {
+        font-size: 12px;
+      }
+    }
+
+    .btm {
+      display: flex;
+      // align-items: center;
+      .left {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        margin-right: 0;
+        .inputCon {
+          display: none;
+        }
+        .btnCon {
+          width: 100%;
+        }
+      }
+      .right {
+        display: none;
+      }
+    }
+  }
+  .opencardInvite {
+    animation: heightChanhe 1s;
+    max-height: max-content;
+    .body {
+      visibility: visible;
+    }
+  }
+  .closecardInvite {
+    animation: heightChanheClose 1s;
+    max-height: 102px;
+    .body {
+      // display: flex;
+      animation: heightChanheCloseVisibilty 1s;
+    }
+  }
+}
+
+@keyframes heightChanhe {
+  0% {
+    max-height: 102px;
+  }
+  //   50% {
+  //     max-height: 270px;
+  //   }
+  100% {
+    max-height: 439px;
+  }
+}
+
+@keyframes heightChanheClose {
+  0% {
+    max-height: 439px;
+  }
+  //   50% {
+  //     max-height: 270px;
+  //   }
+  100% {
+    max-height: 102px;
+  }
+}
+@keyframes heightChanheCloseVisibilty {
+  0% {
+    visibility: visible;
+  }
+  90% {
+    visibility: visible;
+  }
+  //   50% {
+  //     max-height: 270px;
+  //   }
+  100% {
+    visibility: hidden;
+  }
+}
+@keyframes btmanimation {
+  0% {
+    transform: translateX(30%);
+  }
+  90% {
+    // visibility: visible;
+  }
+  //   50% {
+  //     max-height: 270px;
+  //   }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes leftWidthOpenanimation {
+  0% {
+    min-width: 0;
+    width: 0;
+    max-width: 0;
+  }
+
+  100% {
+    min-width: calc(100% - 493px);
+    width: calc(100% - 493px);
+    max-width: calc(100% - 493px);
+  }
+}
+@keyframes leftWidthCloseanimation {
+  0% {
+    min-width: calc(100% - 493px);
+    width: calc(100% - 493px);
+    max-width: calc(100% - 493px);
+  }
+
+  100% {
+    min-width: 0;
+    width: 0;
+    max-width: 0;
+  }
+}

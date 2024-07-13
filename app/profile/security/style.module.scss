@@ -1,0 +1,414 @@
+.mainCard {
+  width: 100%;
+  min-height: 660px;
+  padding: 24px;
+  border-radius: 24px;
+
+  border: 2px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+  background-color: transparent;
+}
+// Gilroy
+// GilroyMed
+// GilroySemiBold
+
+.infoCard {
+  width: 100%;
+  border-radius: 12px;
+
+  border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+  background: var(
+    --background-content_bg-content_bg-5,
+    rgba(137, 137, 234, 0.05)
+  );
+  /* blur/blur_120 */
+  backdrop-filter: blur(60px);
+  padding: 32px;
+  /* blur/blur_120 */
+  margin-bottom: 16px;
+}
+.infoCardBelow {
+  padding: 24px;
+}
+.maintitle {
+  color: var(--White-white, #fff);
+  text-align: center;
+
+  /* Title-3/Semi-bold */
+  font-family: var(--GilroySemiBold);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.subtitle {
+  width: 100%;
+  margin-top: 16px;
+
+  label {
+    color: var(--White-white, #fff);
+
+    /* Body-2/Regular */
+    font-family: var(--Gilroy);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.btmSigninWith {
+  width: 100%;
+  margin-top: 24px;
+
+  .title {
+    color: var(--White-white, #fff);
+
+    /* Body-1/Semi-bold */
+    font-family: var(--GilroySemiBold);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 16px */
+    margin-bottom: 16px;
+  }
+  .rowOf {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+
+    .value {
+      margin-left: 16px;
+      label {
+        color: var(--White-white, #fff);
+        text-align: center;
+
+        /* Body-1/Semi-bold */
+        font-family: var(--GilroySemiBold);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 16px */
+        .offShade {
+          color: #bebebe;
+        }
+      }
+    }
+  }
+  .ShowRowMobUserEmail {
+    margin: 16px 0;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    .col {
+      width: 49%;
+      max-width: 49%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .key {
+        color: var(--gray-gray, #bebebe);
+
+        /* Body-2/medium */
+        font-family: var(--GilroyMed);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 14px */
+      }
+      .value {
+        margin-top: 4px;
+        color: var(--White-white, #fff);
+
+        /* Body-2/medium */
+        font-family: var(--GilroyMed);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 14px */
+        overflow: hidden;
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  .ShowOnMobBtmInfo {
+    display: none;
+    margin-top: 16px;
+    label {
+      color: var(--gray-gray, #bebebe);
+      margin-left: 7px;
+      /* Note/regular */
+      font-family: var(--Gilroy);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .btnPwd {
+    display: flex;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+    background: var(
+      --background-content_bg-content_bg-5,
+      rgba(137, 137, 234, 0.05)
+    );
+    cursor: pointer;
+    label {
+      color: var(--White-white, #fff);
+      text-align: center;
+
+      /* Body-1/Medium */
+      font-family: var(--GilroyMed);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+  }
+  .btmhigh {
+    display: flex;
+    width: 150px;
+    padding: 13px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px;
+    background: var(
+      --Primary-disabled_primary,
+      linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%),
+      radial-gradient(
+        137.13% 253.39% at 76.68% 66.67%,
+        #602ea6 0%,
+        #c977d6 100%
+      )
+    );
+    cursor: pointer;
+    position: relative;
+    label {
+      color: var(--White-white_30, rgba(255, 255, 255, 0.3));
+      text-align: center;
+      cursor: pointer;
+
+      /* Body-2/Semi-bold */
+      font-family: var(--GilroySemiBold);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 14px */
+    }
+
+    &:hover {
+      .tooltiptext {
+        visibility: visible;
+      }
+    }
+
+    .tooltiptext {
+      color: var(--White-white, #fff);
+
+      /* Body-2/Regular */
+      font-family: var(--GilroyMed);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-wrap: nowrap;
+      border-radius: 16px;
+      border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+      background: var(
+        --background-content_bg-content_bg-5,
+        rgba(137, 137, 234, 0.05)
+      );
+      box-shadow: 0px 16px 35px -15px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(12.5px);
+      height: 40px;
+      padding: 12px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      visibility: hidden;
+      text-align: center;
+      /* Position the tooltip */
+      position: absolute;
+      z-index: 1;
+      right: 85%;
+      top: -60%;
+    }
+  }
+}
+.pwdCon {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  margin-top: 24px;
+  width: 100%;
+
+  .pwdLbl {
+    color: var(--White-white, #fff);
+    text-align: center;
+
+    /* Body-1/Semi-bold */
+    font-family: var(--GilroySemiBold);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 16px */
+  }
+}
+.rowofPwdChange {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  width: 100%;
+  justify-content: space-between;
+  .row {
+    display: flex;
+    align-items: center;
+  }
+  .colItem {
+    margin-right: 24px;
+    width: 281px;
+  }
+  .btnConSave {
+    width: 229px;
+  }
+}
+.btnPwdMob {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mainCard {
+    min-height: max-content;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  .HideonMob {
+    display: none;
+  }
+  .infoCard {
+    padding: 24px 16px 16px 16px;
+    border-radius: 24px;
+    .btnPwdMob {
+      margin-top: 10px;
+      display: flex;
+      padding: 10px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 12px;
+      border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+      background: var(
+        --background-content_bg-content_bg-5,
+        rgba(137, 137, 234, 0.05)
+      );
+      color: var(--White-white, #fff);
+      text-align: center;
+
+      /* Body-1/Medium */
+      font-family: var(--GilroyMed);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .infoCardBelow {
+    padding: 24px 16px 16px 16px;
+  }
+  .topBar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    .btnPwd {
+      display: none;
+    }
+    .btmhigh {
+      width: 100%;
+      margin-top: 24px;
+      margin-bottom: 8px;
+
+      .tooltiptext {
+        display: none !important;
+      }
+    }
+    .tooltiptextMob {
+      color: var(--White-white, #fff);
+      text-align: center;
+
+      /* Body-2/Regular */
+      font-family: var(--Gilroy);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      align-self: stretch;
+    }
+  }
+  .maintitle {
+    font-size: 15.5px;
+  }
+  .btmSigninWith {
+    width: 100%;
+    margin-top: 0;
+
+    .rowOf {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+
+      .value {
+        margin-left: 16px;
+        label {
+          font-size: 14px;
+          .offShade {
+            display: none;
+          }
+        }
+      }
+    }
+    .ShowRowMobUserEmail {
+      display: flex;
+    }
+    .ShowOnMobBtmInfo {
+      display: flex;
+    }
+  }
+  .pwdCon {
+    height: max-content;
+    margin-top: 16px;
+  }
+  .rowofPwdChange {
+    margin-top: 16px;
+    flex-direction: column;
+    .row {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+    }
+    .colItem {
+      margin-right: 0;
+      width: 100%;
+    }
+    .btnConSave {
+      width: 100%;
+    }
+  }
+}

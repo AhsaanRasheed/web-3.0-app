@@ -1,0 +1,149 @@
+.MainPhoneDropDown {
+  position: relative;
+  z-index: 100;
+}
+.PhoneDropDown {
+  height: 50px;
+  border-radius: 48px;
+  box-shadow: 0px 4px 16px 0px #0066ff52;
+  background: #050e1d;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 30;
+  width: 100%;
+  padding: 3% 24px;
+  /* margin-top: 5px; */
+}
+.PhoneDropDownLeft {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+.PhoneDropDown svg {
+  margin-left: 8px;
+}
+.SelectedcountryCode {
+  margin-left: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.PhoneDropDown input {
+  flex-grow: 1;
+  margin-left: 8px;
+  color: #fff;
+}
+
+.PhoneDropDown_option {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+height: max-content;
+  width: 100%;
+  background: #0a1e41;
+  left: 0;
+  padding: 40px 10px 10px 10px;
+  border-radius: 16px;
+}
+
+.PhoneDropDown_option_row {
+  min-height: 200px;
+  height: max-content;
+  overflow-y: auto;
+  max-height: 220px;
+  position: relative;
+}
+.PhoneDropDown_option_row .tbl_container{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.PhoneDropDown_option_row .tbl_container table {
+  border-collapse: collapse;
+  width: 100%;
+  /* position: absolute; */
+  top: 0;
+  height: max-content;
+  /* margin-top: 200px; */
+}
+.PhoneDropDown_option_row table .search_input{
+  height: 30px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 16px 0px #0066ff52;
+  background: #050e1d;
+  width: calc(100% - 40px);
+  padding: 10px 15px;
+  margin: 0 20px 5px 20px;
+}
+.PhoneDropDown_option_row .PhoneDropDown_option_row_tr:hover {
+  background: linear-gradient(
+    95.1deg,
+    rgba(36, 158, 245, 0.33) 0.08%,
+    rgba(36, 158, 245, 0) 85.94%
+  );
+}
+
+.PhoneDropDown_option_row .PhoneDropDown_option_row_tr td {
+  padding: 5px 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.PhoneDropDown_option_row .PhoneDropDown_option_row_tr td label {
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.dropdown_menu-6 {
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+}
+.dropdown_menu-6.opening {
+  display: block;
+}
+.dropdown_menu-6.closing {
+  animation: shrinkUp 300ms ease-in-out forwards;
+}
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes shrinkUp {
+  0% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(0.9);
+  }
+  100% {
+    transform: scaleY(0);
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .PhoneDropDown {
+    padding: 3% 8px;
+    margin-top: 5px;
+  }
+  .PhoneDropDown svg {
+    margin-left: 1px;
+  }
+  .SelectedcountryCode {
+    margin-left: 5px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .PhoneDropDown input {
+    margin-left: 5px;
+  }
+}

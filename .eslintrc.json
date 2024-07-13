@@ -1,0 +1,19 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // Disables the warning for missing dependencies in useEffect
+    "react-hooks/exhaustive-deps": "off", 
+
+    // Disables the warning for using <img> instead of <Image> from next/image
+    "@next/next/no-img-element": "off", 
+
+    // Disables the warning for missing alt attribute in <img> tags
+    // "jsx-a11y/alt-text": "off", 
+
+    // Disables the warning for missing key prop in lists
+    "react/jsx-key": "off",
+
+     // Disables the warning for "" or '
+    "react/no-unescaped-entities": "off"
+  }
+}

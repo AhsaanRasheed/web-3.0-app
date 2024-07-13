@@ -1,0 +1,188 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+max-width: 1062px;
+  .upper {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+
+    .upper_inner {
+      
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      padding: 0 3px;
+    }
+  }
+
+  .lower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+
+    .table_container {
+      background: var(--gradient-bg-dark);
+      padding: 10px;
+      border-radius: 24px;
+      min-width: 95%;
+      max-width: 95%;
+    }
+  }
+}
+
+@media (max-width: 1370px) {
+  .container {
+    gap: 10px;
+
+    .upper {
+      flex-direction: column;
+      gap: 20px;
+      padding: 5px 3px;
+      width: 100%;
+      margin-bottom: 15px;
+
+      .upper_inner {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .text_container,
+      .selection_container {
+        width: 100%;
+        gap: 10px;
+
+        .content {
+          flex-direction: column;
+          padding: 10px;
+
+          .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            p {
+              padding: 0;
+            }
+
+            .slider_container {
+              .slider_value {
+                margin-left: 30px;
+              }
+            }
+          }
+
+          .price_container {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .lower {
+      .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        width: 100%;
+      }
+
+      .button {
+        align-self: center;
+
+        button {
+          width: 446px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1370px) {
+  .container {
+    gap: 10px;
+
+    .upper {
+      flex-direction: column;
+      gap: 20px;
+      padding: 5px 3px;
+      width: 100%;
+      margin-bottom: 15px;
+
+      .upper_inner {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .text_container,
+      .selection_container {
+        width: 100%;
+        gap: 10px;
+
+        .content {
+          flex-direction: column;
+          padding: 10px;
+
+          .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            p {
+              padding: 0;
+            }
+
+            .slider_container {
+              .slider_value {
+                margin-left: 30px;
+              }
+            }
+          }
+
+          .price_container {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .lower {
+      .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        width: 100%;
+      }
+
+      .button {
+        align-self: center;
+
+        button {
+          width: 446px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    .upper {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

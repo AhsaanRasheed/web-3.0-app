@@ -1,0 +1,31 @@
+.itemSelector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background-color: #7682c114;
+    padding: 4px;
+    border-radius: 8px;
+    height: 41px;
+    width: fit-content;
+    font-weight: 100;
+  
+    .item {
+      cursor: pointer;
+      color: white;
+      font-family: Jura;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      transition: all 0.3s ease;
+      padding: 8px;
+  
+      &:hover,
+      &.active {
+        background-color: #7682c114;
+        border-radius: 8px;
+      }
+    }
+  }
+  

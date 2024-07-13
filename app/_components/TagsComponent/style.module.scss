@@ -1,0 +1,47 @@
+.tag_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+  height: 200px;
+  overflow-y: auto;
+
+  // Scrollbar styling for Webkit browsers
+  &::-webkit-scrollbar {
+    width: 4px; // Width of the scrollbar
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #050e1d; // Color of the track
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--text-color-4);
+    border-radius: 2px;
+    box-shadow: 0 4px inset #050e1d, 0 -4px inset #050e1d;
+  }
+
+  // Scrollbar styling for Firefox
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-color-4) #050e1d;
+
+  .tag {
+    display: flex;
+    align-items: baseline;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: white;
+
+    .tag_text {
+      margin-right: 8px;
+    }
+
+    .remove_tag_button {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  gap: 10px;
+  min-height: calc(100dvh - 320px);
+  max-width: 1062px;
+  .upper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 24px;
+    padding: 5px;
+
+    .chart_container {
+      min-width: 510px;
+    }
+  }
+
+  .lower {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 20px;
+    .cards {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+      padding: 0 20px;
+      justify-content: space-around;
+    }
+
+    .button {
+      align-self: center;
+      margin-top: 15px;
+      button {
+        width: 446px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1375px) {
+  .container {
+    align-items: center;
+
+    .upper {
+      flex-direction: column;
+      width: 100%;
+      padding-top: 5px;
+      justify-content: center;
+      .chart_container {
+        display: flex;
+        align-items: center;
+        // min-width: 330px;
+        // min-height: 350px;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    .lower {
+      padding: 5px;
+      .cards {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+      }
+      .button {
+        button {
+          width: 365px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    .upper {
+      .chart_container {
+        display: block;
+        width: 100%;
+        max-width: max-content;
+      }
+    }
+    .lower {
+      .button {
+        button {
+          width: 270px;
+        }
+      }
+    }
+  }
+}

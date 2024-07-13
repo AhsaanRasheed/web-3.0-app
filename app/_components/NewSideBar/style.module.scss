@@ -1,0 +1,277 @@
+.DesktopMenu {
+  width: 82px;
+  height: 100dvh;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-right: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+}
+
+.topRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: space-between;
+  height: auto;
+
+  max-height: calc(100dvh - 92px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  .logo {
+    cursor: pointer;
+  }
+  .menu {
+    padding: 24px 0;
+    .item {
+      // .tooltip {
+      //   position: relative;
+      //   display: inline-block;
+      //   border-bottom: 1px dotted black;
+      // }
+
+      .tooltiptext {
+        color: var(--White-white, #fff);
+
+        /* Body-2/Regular */
+        font-family: var(--GilroySemiBold);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border-radius: 6px;
+        border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+        background: var(
+          --background-content_bg-content_bg-5,
+          rgba(137, 137, 234, 0.05)
+        );
+        box-shadow: 0px 16px 35px -15px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(50px);
+        height: 40px;
+        padding: 12px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        visibility: hidden;
+
+        text-align: center;
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        left: 65px;
+      }
+      display: flex;
+      padding: 8px;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      justify-content: center;
+      border-radius: 5px;
+      opacity: 0.75;
+      background-color: transparent;
+      //   box-shadow: 0px 0px 97.549px 0px rgba(18, 101, 128, 0.25),
+      //     0px 0px 27.871px 0px rgba(18, 101, 128, 0.25);
+      margin: 12px 0;
+      cursor: pointer;
+      svg {
+        cursor: pointer;
+      }
+    }
+    .item:hover {
+      .tooltiptext {
+        visibility: visible;
+      }
+      opacity: 1;
+      box-shadow: inset 0px 0px 40px 0px rgba(108, 108, 225, 0.25),
+        0px 0px 97.549px 0px rgba(108, 108, 225, 0.25),
+        0px 0px 27.871px 0px rgba(108, 108, 225, 0.25);
+    }
+    .selectedItem {
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: inset 0px 0px 195px 0px rgba(108, 108, 225, 0.25),
+        0px 0px 97.549px 0px rgba(108, 108, 225, 0.25),
+        0px 0px 27.871px 0px rgba(108, 108, 225, 0.25);
+
+      // backdrop-filter: blur(6px);
+    }
+  }
+}
+
+.signout {
+  cursor: pointer;
+  svg {
+    cursor: pointer;
+  }
+}
+
+.MobileNav {
+  display: none;
+}
+
+@media (max-width: 786px) {
+  .DesktopMenu {
+    display: none;
+  }
+
+  .MobileNav {
+    display: block;
+
+    // style
+    display: flex;
+    padding: 24px 24px 16px 24px;
+    align-items: center;
+    color: white;
+    width: 100dvw;
+    border-bottom: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+    // background-color: #0c0713;
+
+    /* blur/blur_100 */
+    backdrop-filter: blur(50px);
+    // overflow: auto;
+
+    .navigationBar {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+
+      position: relative;
+
+      .Menu {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .MenuAvatar {
+        border-radius: 32px;
+        border: 1px solid #fff;
+      }
+    }
+
+    @keyframes slideFromRight {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .ItemsWrapper {
+      display: flex;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: 100dvh;
+      background-color: #0c0713;
+      animation: slideFromRight 0.8s ease forwards;
+
+      .container {
+        display: flex;
+        padding: 24px 16px;
+        flex-direction: column;
+        align-items: center;
+        // gap: 86px;
+        width: 100%;
+        overflow: auto;
+
+        .topBar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 24px;
+          width: 100%;
+
+          /* zoom: 0.8; */
+
+          .right {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+
+            .MenuAvatar {
+              border-radius: 64px;
+              border: 1px solid #fff;
+              background: lightgray 50% / cover no-repeat, #d9d9d9;
+              width: 64px;
+              height: 64px;
+              flex-shrink: 0;
+            }
+
+            h2 {
+              color: var(--White-white, #fff);
+
+              /* Body-1/Semi-bold */
+              font-family: var(--GilroySemiBold);
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-wrap: nowrap;
+            }
+          }
+        }
+
+        .MenuItemsList {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          a {
+            text-decoration: none;
+          }
+          @media (max-width: 375px) {
+            zoom: 0.8;
+          }
+
+          .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            width: 115px;
+            height: 76px;
+
+            color: var(--White-white, #fff);
+            text-align: center;
+
+            /* Body-2/Semi-bold */
+            font-family: var(--GilroySemiBold);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-wrap: nowrap;
+            opacity: 0.5;
+
+            svg {
+              height: 24px;
+              width: 24px;
+              scale: 1.6;
+            }
+          }
+
+          .active {
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0px 0px 97.549px 0px rgba(108, 108, 225, 0.25),
+              0px 0px 27.871px 0px rgba(108, 108, 225, 0.25);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

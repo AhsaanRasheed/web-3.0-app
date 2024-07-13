@@ -1,0 +1,274 @@
+
+  .tblscroll{
+    /* width: 100%;
+    display: block;
+    overflow: auto; 
+    max-height: 300px; */
+  }
+  
+  /* // ////////////////////////////// */
+  
+  .desktop_tbl table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    max-height: 100px;
+    overflow: auto;
+    /* display:block; */
+  }
+  
+  /* Thead Start */
+  
+  .desktop_tbl table thead {
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+  
+  .desktop_tbl table thead th {
+    background: #050e1d;
+    padding: 8px;
+  }
+  .large {
+    min-width: 300px;
+  }
+  .small {
+    width: 10px;
+  }
+  .desktop_tbl table thead th:first-child {
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+  }
+  .desktop_tbl table thead th:last-child {
+    border-bottom-right-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+  
+  .desktop_tbl table thead th div {
+    display: flex;
+    flex-direction: row;
+    height: 32px;
+    padding: 4px 16px 4px 16px;
+    border-radius: 48px;
+    background: #000818;
+    max-width: 200px;
+    width: max-content;
+    margin: auto;
+  }
+  .desktop_tbl table thead th .nolbl {
+    background: transparent;
+  }
+  
+  .desktop_tbl table thead th .l {
+    width: 100%;
+    margin: 0;
+
+  }
+  .desktop_tbl table thead th div p {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+  
+    color: #fff;
+  }
+  .desktop_tbl table thead th div select {
+    padding: 4px 10px;
+    border-radius: 48px;
+    gap: 8px;
+    background: rgba(0, 8, 24, 1);
+    color: #fff;
+    border-width: 0;
+    outline: 0px;
+  }
+  .desktop_tbl table thead th div img {
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+  }
+  .maxcontent {
+    width: max-content;
+    max-width: 200px;
+  }
+  
+  /* Thead End */
+  
+  /* Tbody Start */
+  .desktop_tbl table tbody {
+     overflow:auto;
+     max-height: 200px;
+     height: 150px;
+     width:100%;
+     /* display: block; */
+  }
+  .desktop_tbl table tbody tr {
+    height: 50px;
+  }
+  .desktop_tbl table tbody tr td div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    color: #9ea6ba;
+  }
+  
+  .desktop_tbl table tbody tr td .l {
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+  
+  .desktop_tbl table tbody tr td div img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+  
+  .desktop_tbl table tbody tr td div .default_withdraw_btn {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    color: #ffffff;
+    width: 90%;
+    min-width: 95px;
+    max-width: 106px;
+
+    height: 27px;
+    border-radius: 31.13px;
+    background: #050e1d;
+    border: 0.65px solid #ffffff;
+    box-shadow: 0px 0px 4.539393901824951px 1.2969696521759033px #0075ff;
+    cursor: pointer;
+  }
+  .desktop_tbl table tbody tr td div .default_locked_btn {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    min-width: 95px;
+    max-width: 106px;
+  
+    color: #596170;
+    width: 90%;
+    height: 27px;
+    border-radius: 31.13px;
+    background: #050e1d;
+    border: 0.65px solid #193253;
+    box-shadow: 0px 0px 7px 2px #0075ff33;
+    cursor: pointer;
+  
+  }
+  .desktop_tbl table tbody tr td div .status_btn {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    width: 90%;
+    min-width: 95px;
+    max-width: 106px;
+
+    height: 27px;
+    border-radius: 31.13px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .desktop_tbl table tbody tr td div .status_btn_pending {
+    color: #ffb13d;
+  
+    border: 1px solid #ffb13d;
+  }
+  .desktop_tbl table tbody tr td div .status_btn_onchain {
+    color: #1cc587;
+    border: 1px solid #1cc587;
+  }
+  /* Tbody End */
+  
+
+
+  @media screen and (max-width: 1525px) {
+    .large {
+      min-width: 200px;
+    }
+    .desktop_tbl table thead th{
+    padding: 4px 8px 4px 8px;
+
+      padding: 7px;
+    }
+  }
+
+  @media screen and (max-width: 1502px) {
+    
+    .desktop_tbl table thead th{
+      padding: 6px;
+    }
+    .desktop_tbl table thead th div{
+      max-width: 170px;
+    padding: 4px 8px 4px 8px;
+
+    width: max-content;
+
+    }
+  }
+  @media screen and (max-width: 1480px) {
+    
+    .desktop_tbl table thead th{
+      padding: 4px;
+    }
+    .desktop_tbl table thead th div{
+      max-width: 150px;
+    padding: 4px 8px 4px 8px;
+    width: max-content;
+    }
+    .desktop_tbl table thead th div select{
+    padding: 4px 7px;
+      
+    }
+    .desktop_tbl table thead th div img {
+      width: 20px;
+      height: 20px;
+      margin-left: 8px;
+    }
+  }
+  @media screen and (max-width: 1450px) {
+    
+    .desktop_tbl table thead th{
+      padding: 4px;
+    }
+    .desktop_tbl table thead th div{
+      max-width: 150px;
+    width: max-content;
+    padding: 4px 5px 4px 5px;
+
+    }
+  }
+  @media screen and (max-width: 1420px) {
+    .large {
+      min-width: 0px;
+    }
+    .desktop_tbl table thead th{
+      padding: 4px;
+    }
+    .desktop_tbl table thead th div{
+      max-width: 150px;
+    width: min-content;
+
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    
+    .desktop_tbl table thead th{
+      padding: 4px;
+    }
+    
+  }

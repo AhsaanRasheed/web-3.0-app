@@ -1,0 +1,55 @@
+{
+  "logoUrl": "/logo-1.svg",
+  "menus": [
+    {
+      "title": "MAIN MENU",
+      "list": [
+        {
+          "itemName": "Sign In",
+          "itemIconUrl": "/sidebar/signIn.svg",
+          "itemIconUrlSelected": "/sidebar/signIn_b.svg",
+
+          "itemUrl": "/sign-in"
+        },
+        {
+          "itemName": "Sign Up",
+          "itemIconUrl": "/sidebar/signUp.svg",
+          "itemIconUrlSelected": "/sidebar/signUp_b.svg",
+          "itemUrl": "/sign-up"
+        }
+      ]
+    },
+    {
+      "title": "SETTINGS",
+      "list": [
+        {
+          "itemName": "Settings",
+          "itemIconUrl": "/sidebar/settings.svg",
+          "itemIconUrlSelected": "/sidebar/settings_b.svg",
+          "itemUrl": "/settings"
+        },
+        {
+          "itemName": "Policies",
+          "itemIconUrl": "/sidebar/policies.svg",
+          "itemIconUrlSelected": "/sidebar/policies_b.svg",
+
+          "itemUrl": "/policies"
+        },
+        {
+          "itemName": "Support",
+          "itemIconUrl": "/sidebar/support.svg",
+          "itemIconUrlSelected": "/sidebar/support_b.svg",
+
+          "itemUrl": "/support"
+        },
+        {
+          "itemName": "Documents",
+          "itemIconUrl": "/sidebar/document.svg",
+          "itemIconUrlSelected": "/sidebar/document_b.svg",
+
+          "itemUrl": "/document"
+        }
+      ]
+    }
+  ]
+}

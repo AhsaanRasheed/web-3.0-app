@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "id": "profile",
+      "title": "Profile",
+      "url": "/profile/",
+      "image": "/icons/profile-circle.svg"
+    },
+    {
+      "id": "sign-out",
+      "title": "Sign out",
+      "url": "/sign-out",
+      "image": "/sidebar/signOut.svg",
+      "topBorder": true
+    }
+  ]
+}

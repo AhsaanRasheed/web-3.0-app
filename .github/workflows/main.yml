@@ -1,0 +1,42 @@
+name: WHITE LABEL APP
+
+on:
+  push:
+    branches: ["build"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - name: Install CI dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Building Code
+        run: npm run build
+
+      - name: List directory structure
+        run: ls -l
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-north-1 # Example: us-east-1
+
+      - name: Deploy to S3
+        run: |
+          aws s3 sync ./out s3://sandbox.primetrader.com --delete --exclude '.git/*' --exclude '.github/*'

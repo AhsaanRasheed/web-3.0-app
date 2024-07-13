@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "title": "Cryptomarket",
+      "link": "/cryptopricing/?s=cryptomarket"
+    },
+    {
+      "title": "Cryptoheatmap",
+      "link": "/cryptopricing/?s=cryptoheatmap"
+    }
+  ]
+}

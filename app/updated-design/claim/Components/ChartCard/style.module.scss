@@ -1,0 +1,90 @@
+.cardContainer {
+  max-width: 500px;
+  min-height: 303px;
+  border-radius: 2px 2px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    177.94deg,
+    rgba(36, 158, 245, 0.33) 3.73%,
+    rgba(36, 158, 245, 0) 94.81%
+  );
+  position: relative;
+  gap: 16px;
+}
+
+.cardItem {
+  margin: 20px 0;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.dropdownContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.chartContainer {
+  margin-bottom: 20px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .chart {
+    &.lineChart {
+      max-width: 470px;
+      max-height: 280px;
+      width: 470px;
+      height: 280px;
+    }
+
+    &.donutChart {
+      max-width: 300px;
+      width: 300px;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardContainer {
+    max-width: 330px;
+    align-items: center;
+  }
+
+  .chartContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    .chart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &.lineChart {
+        max-width: 300px;
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .cardContainer {
+    max-width: 270px;
+    width: 260px;
+  }
+}

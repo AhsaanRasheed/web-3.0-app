@@ -1,0 +1,42 @@
+.checkbox {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    appearance: none;
+    outline: none;
+    border: 1px solid var(--text-color-4);
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+
+    &:checked {
+      background-color: var(--text-color-4);
+
+      &:after {
+        content: "✔";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .checkbox {
+  margin-top: 0;
+    margin-left: 5px;
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

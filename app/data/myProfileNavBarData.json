@@ -1,0 +1,12 @@
+{
+    "data": [
+        {
+            "title": "Settings",
+            "link": "/profile/settings"
+        },
+        {
+            "title": "Security",
+            "link": "/profile/security"
+        }
+    ]
+}

@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+.PT_Chat_Bot {
+  position: absolute;
+  z-index: 5000000000000000000000000000000000;
+}
+/* Floating Button Starts*/
+
+.floatingdiv {
+  position: fixed;
+  bottom: 90px;
+  right: 10px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  display: none;
+  &.visible {
+    display: block;
+  }
+  &.hidden {
+    display: none;
+  }
+}
+.floatingdiv1 {
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  display: block;
+}
+
+.chat {
+  display: flex;
+  position: relative;
+  float: right;
+}
+.background {
+  background-color: #1950ff;
+  border-radius: 50%;
+  box-shadow: 0 2.1px 1.3px rgba(0, 0, 0, 0.044),
+    0 5.9px 4.2px rgba(0, 0, 0, 0.054), 0 12.6px 9.5px rgba(0, 0, 0, 0.061),
+    0 25px 20px rgba(0, 0, 0, 0.1);
+  height: 70px;
+  left: 10px;
+  position: absolute;
+  top: 10px;
+  width: 70px;
+}
+.chatbubble {
+  cursor: pointer;
+  position: relative;
+}
+.bubble {
+  transform-origin: 50%;
+  transition: transform 500ms cubic-bezier(0.17, 0.61, 0.54, 0.9);
+}
+.line {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2.75;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 90;
+  stroke-dashoffset: -20;
+}
+.line2 {
+  stroke-dasharray: 67 87;
+  stroke-dashoffset: -18;
+}
+.circle {
+  fill: #ffffff;
+  stroke: none;
+  transform-origin: 50%;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.active .bubble {
+  transform: translateX(24px) translateY(4px) rotate(45deg);
+}
+.active .line1 {
+  stroke-dashoffset: 21;
+}
+.active .line2 {
+  stroke-dashoffset: 30;
+}
+.active .circle {
+  transform: scale(0);
+}
+/* Floating Button Ends*/
+
+.chatbox {
+  width: 390px;
+  height: 80dvh;
+  flex-shrink: 0;
+  border-radius: 24px;
+  border: 1px solid var(--Line, rgba(255, 255, 255, 0.87));
+  background: var(
+    --Bg-Form,
+    linear-gradient(149deg, #060f21 0.91%, #0b2248 50.46%, #030813 100%)
+  );
+
+  /* Btn 2 */
+  box-shadow: 0px 0px 7px 2px #0075ff, 0px 0px 7px 2px #0075ff inset;
+}
+
+.chatbox .topbar {
+  width: 100%;
+  height: 65px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 24px 24px 2px 2px;
+  background: var(
+    --Gradient-Card,
+    linear-gradient(
+      178deg,
+      rgba(36, 158, 245, 0.33) 3.73%,
+      rgba(36, 158, 245, 0) 94.81%
+    )
+  );
+}
+
+.chatbox .topbar .neon {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 0px 2px 2px 0px;
+  background: var(--Blue-Light, #d9d9d9);
+  box-shadow: 0px 0px 7px 2px #0075ff;
+}
+
+.chatbox .topbar .TopBarAvatar {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.chatbox .topbar .TopBarAvatar img{
+  height: 32px;
+  width: 32px;
+}
+.chatbox .topbar .TopBarAvatar .col0 {
+  margin-top: 2px;
+  margin-left: 15px;
+}
+.chatbox .topbar .TopBarAvatar .col0 label {
+  color: var(--Primary-Neutrals-default, var(--Neutral-Default, #fff));
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  // margin-top: -3px;
+}
+.chatbox .topbar .TopBarAvatar .col0 p {
+  color: var(--Primary-Neutrals-medium, var(--Neutral-Medium, #9ea6ba));
+
+  /* Caption */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-top: -2px;
+}
+$vh-value: 80; // Define the vh value as a number
+$px-value: 20px + 52px + 65px +10px; // Calculate the sum of pixels
+
+$height: calc(#{$vh-value}dvh - #{$px-value});
+.chatbox .msgBox {
+  height: $height;
+  overflow-y: auto;
+  margin-top: 10px;
+  margin-right: 7px;
+  padding: 0 5px 0 5px;
+}
+.chatbox .msgBox::-webkit-scrollbar{
+  width:4px;
+}
+.chatbox .msgBox::-webkit-scrollbar-track{
+  -webkit-box-shadow:inset 0 0 6px rgba(0,0,0); 
+  background: #050E1D;
+
+    border-radius:2px;
+}
+.chatbox .msgBox::-webkit-scrollbar-thumb {
+  border-radius:2px;
+  background: #0090E7;
+
+}
+.msgBox .msg {
+  margin-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.msgBox .msg .topMsgBar {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  align-items: center;
+}
+.msgBox .sender .topMsgBar {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: right;
+  // background-color: red;
+}
+.msgBox .msg .topMsgBar p{
+  //styleName: Body 3;
+font-family: Roboto;
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+color: #9EA6BA;
+margin-left: 5px;
+}
+.msgBox .sender .topMsgBar p{
+  //styleName: Body 3;
+font-family: Roboto;
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+color: #9EA6BA;
+margin-right: 5px;
+}
+.msgBox .msg .top {
+  display: flex;
+  flex-direction: row;
+
+    // align-items: center;
+}
+
+.msgBox .msg .top label {
+  flex-grow: 1;
+  border-radius: 25px;
+  background: var(--Primary-Blue-Medium, #050e1d);
+  box-shadow: 0px 4px 16px 0px rgba(0, 102, 255, 0.32);
+  padding: 15px 20px;
+
+  color: var(--Primary-Neutrals-medium, var(--Neutral-Medium, #9ea6ba));
+
+  /* Body 1 */
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+}
+.msgBox .msg .seen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin-top: 4px;
+}
+.msgBox .sender .seen {
+  justify-content: right;
+}
+.msgBox .msg .seen p {
+  color: var(--Neutral-Default, #fff);
+
+  /* Mobile/Roboto/Body 2 */
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 7px;
+}
+.msgBox .msg .seen img {
+  margin-top: 0px;
+}
+.chatbox .TypingBar {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+.chatbox .TypingBar form {
+  margin-left: 2.5%;
+  width: 90%;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 48px;
+  background: var(--Blue-Medium, #050e1d);
+  box-shadow: 0px 4px 16px 0px rgba(0, 102, 255, 0.32);
+}
+
+.chatbox .TypingBar form input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 20px;
+  flex-grow: 1;
+  max-width: 68%;
+}
+
+.chatbox .TypingBar form img {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.chatbox .TypingBar form button {
+  background-color: transparent;
+  border: none;
+}
+
+@media screen and (max-width: 720px) {
+  .floatingdiv1 {
+    bottom: 0;
+    right: 0px;
+    padding: 10px;
+  }
+  .chatbox {
+    width: 90dvw;
+  }
+}
+

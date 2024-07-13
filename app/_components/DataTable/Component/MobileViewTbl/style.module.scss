@@ -1,0 +1,228 @@
+.tbl_card {
+    margin-bottom: 20px;
+    margin-top: 10px;
+  width: 100%;
+  max-height: 592px;
+
+  border-radius: 24px;
+  padding: 8px;
+  background: linear-gradient(
+      149.22deg,
+      #060f21 0.91%,
+      #0b2248 50.46%,
+      #030813 100%
+    ),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.87), rgba(255, 255, 255, 0.87));
+  border: 1px solid #ffffffde;
+  box-shadow: 0px 0px 7px 2px #0075ff, 0px 0px 7px 2px #0075ff inset;
+}
+
+.tbl_card .header {
+  background: #050e1d;
+  width: 100%;
+  padding: 4px;
+  border-radius: 24px;
+  gap: 8px;
+}
+.tbl_card .header .Row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.tbl_card .header .Row .tag {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  background: #000818;
+  height: 29px;
+  padding: 4px 6px;
+  border-radius: 48px;
+  margin: 3px;
+}
+.tbl_card .header .Row .nolbl {
+  background: transparent;
+  display: none;
+}
+.tbl_card .header .Row .tag p,
+.tbl_card .header .Row .tag select {
+  //styleName: Body 3;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+.tbl_card .header .Row .tag select {
+  border-radius: 48px;
+  gap: 8px;
+  background: rgba(0, 8, 24, 1);
+  color: #fff;
+  border-width: 0;
+  outline: 0px;
+}
+.large {
+  flex-grow: 1;
+}
+.tbl_card .tbody{
+    height:300px;
+   overflow:auto;
+}
+ .RowCardSelected {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  gap: 8px;
+  background: linear-gradient(
+    177.94deg,
+    rgba(36, 158, 245, 0.33) 3.73%,
+    rgba(36, 158, 245, 0) 94.81%
+  );
+ }
+   .TblRow {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+
+  }
+  .TblRow .RowCardTopBar {
+    width: 100%;
+    height: 48px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+ .TblRow .RowCardTopBar p {
+    //styleName: Body 3;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #9ea6ba;
+  }
+ .TblRow .RowCardTopBar .AT {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    margin-left: 2px;
+  }
+  .TblRow .RowCardTopBar .TblRowData{
+    padding: 4px 5px;
+  }
+
+  .TblRow .status_btn {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    width: 100%;
+    min-width: 100px;
+    max-width: 150px;
+    height: 27px;
+    border-radius: 31.13px;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .TblRow .status_btn_pending {
+    color: #ffb13d;
+    border: 1px solid #ffb13d;
+  }
+  .TblRow .status_btn_onchain {
+    color: #1cc587;
+    border: 1px solid #1cc587;
+  }
+
+  .TblRow  .default_withdraw_btn {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    color: #ffffff;
+    width: max-content;
+    min-width: 100px;
+    max-width: 150px;
+    height: 27px;
+    border-radius: 31.13px;
+    background: #050e1d;
+    border: 0.65px solid #ffffff;
+    box-shadow: 0px 0px 4.539393901824951px 1.2969696521759033px #0075ff;
+    cursor: pointer;
+  }
+  .TblRow  .default_locked_btn {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+  
+    color: #596170;
+    width: max-content;
+    min-width: 100px;
+    max-width: 150px;
+    height: 27px;
+    border-radius: 31.13px;
+    background: #050e1d;
+    border: 0.65px solid #193253;
+    box-shadow: 0px 0px 7px 2px #0075ff33;
+    cursor: pointer;
+  
+  }
+
+
+  .TblRow .RowCardOverflowBar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .TblRow .RowCardOverflowBar .Row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .TblRow .RowCardOverflowBar .Row .tbltitle{
+    width: max-content;
+font-family: Roboto;
+font-size: 12px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: left;
+color: #596170;
+
+  }
+.updownArrow{
+
+}
+  .TblRow .RowCardOverflowBar .Row .TblRowData{
+    display: flex;
+    flex-direction: row;
+    // width: 70%;
+    justify-content: end;
+  }
+  .TblRow .RowCardOverflowBar .Row .TblRowData p{
+    //styleName: Body 3;
+font-family: Roboto;
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+color: #9EA6BA;
+
+  }

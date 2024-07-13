@@ -1,0 +1,161 @@
+.card {
+  width: 100%;
+  border-radius: 24px;
+  // TODO later will be removed
+  color: white;
+  backdrop-filter: blur(60px);
+  gap: 16px;
+  
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  min-height: 302px;
+  
+
+  .cardW33 {
+    width: 37%;
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-self: stretch;
+    border-radius: 16px;
+    background: rgba(118, 130, 193, 0.15);
+    backdrop-filter: blur(50px);
+    overflow: auto;
+  }
+
+  .cardW66 {
+    width: 62%;
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-self: stretch;
+    border-radius: 16px;
+    background: rgba(118, 130, 193, 0.15);
+    backdrop-filter: blur(50px);
+    overflow: auto;
+  }
+
+  .cartTitle {
+    color: var(--White-white, #fff);
+    font-family: Jura;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .cardHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 16px;
+  }
+
+  .cardBody {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    max-height: fit-content;
+    // overflow: auto;
+    // width: 100%;
+  }
+  
+
+  .cardLeft {
+    flex-direction: column;
+
+    // TODO: later will remove it once charts are finaled.
+    // ul {
+    //   list-style-type: none;
+    // }
+
+    // li {
+    //   color: var(--White-white, #fff);
+    //   /* Body-1/Medium */
+    //   font-family: Jura;
+    //   font-size: 20px;
+    //   font-style: normal;
+    //   font-weight: 500;
+    //   line-height: normal;
+    //   margin-bottom: 16px;
+    //   display: flex;
+    //   align-items: center;
+
+    //   &:nth-child(1):before {
+    //     background-color: #a0f7ff;
+    //     filter: drop-shadow(0px 0px 14.4px #a0f7ff)
+    //       drop-shadow(0px 0px 28.8px #a0f7ff)
+    //       drop-shadow(0px 0px 100.8px #a0f7ff)
+    //       drop-shadow(0px 0px 604.8px #a0f7ff) drop-shadow(0px 0px 50px #7ef4ff);
+    //   }
+
+    //   &:nth-child(2):before {
+    //     background-color: #ffb13d;
+    //     filter: drop-shadow(0px 0px 14.4px #ffb13d)
+    //       drop-shadow(0px 0px 28.8px #ffb13d)
+    //       drop-shadow(0px 0px 100.8px #ffb13d)
+    //       drop-shadow(0px 0px 604.8px #ffb13d) drop-shadow(0px 0px 50px #ffb13d);
+    //   }
+
+    //   &:nth-child(3):before {
+    //     background-color: #bb2cff;
+    //     filter: drop-shadow(0px 0px 14.4px #bb2cff)
+    //       drop-shadow(0px 0px 28.8px #bb2cff)
+    //       drop-shadow(0px 0px 100.8px #bb2cff)
+    //       drop-shadow(0px 0px 604.8px #bb2cff) drop-shadow(0px 0px 50px #bb2cff);
+    //   }
+
+    //   &:before {
+    //     content: "";
+    //     display: inline-block;
+    //     width: 8px;
+    //     height: 8px;
+    //     border-radius: 50%;
+    //     margin-right: 10px;
+        
+    //   }
+    // }
+  }
+
+  .flexRow {
+    flex-direction: row;
+  }
+}
+
+.cardFull {
+  width: 100%;
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-self: stretch;
+  margin-top: 16px;
+
+  border-radius: 16px;
+  background: rgba(118, 130, 193, 0.15);
+  backdrop-filter: blur(50px);
+}
+
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .cardLeft {
+  }
+
+  .cardW33 {
+    width: 100% !important;
+  }
+
+  .cardW66 {
+    width: 100% !important;
+  }
+}

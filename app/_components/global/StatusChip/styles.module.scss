@@ -1,0 +1,88 @@
+/* Common styles for status chips */
+.statusChip {
+  border-radius: 50px;
+  display: flex;
+  width: 110px;
+  padding: 8px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  /* Common font styles */
+  font-family: var(--Gilroy);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &[data-tooltip]::after {
+    content: attr(data-tooltip); /* Display tooltip content */
+    position: absolute;
+    bottom: calc(100% + -25px); /* Position below the chip */
+    left: 50%; /* Align with the center of the chip */
+    white-space: nowrap; /* Ensure tooltip content stays on one line */
+    visibility: hidden; /* Hide by default */
+    opacity: 0; /* Hide by default */
+
+    // transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    border-radius: 16px;
+    border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+    background: var(
+      --background-content_bg-content_bg-5,
+      rgba(137, 137, 234, 0.05)
+    );
+    box-shadow: 0px 16px 35px -15px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12.5px);
+    display: inline-flex;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--White-white, #fff);
+
+    /* Note/regular */
+    font-family: var(--Gilroy);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    // overflow: visible;
+    z-index: 999;
+  }
+
+  &:hover::after {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/* Styles for yellow status chip */
+.statusChip-pending {
+  border: 1px solid rgba(215, 154, 64, 0.25);
+  background: rgba(215, 154, 64, 0.05);
+  color: var(--orange-orange, #d79a40);
+  text-shadow: 0px 0px 604.8px #d79a40, 0px 0px 28.8px #d79a40;
+}
+
+/* Styles for green status chip */
+.statusChip-onchain {
+  border: 1px solid rgba(62, 255, 163, 0.25);
+  background: rgba(91, 244, 171, 0.05);
+  color: var(--success-green_success, #5bf4ab);
+  text-shadow: 0px 0px 604.8px #3effa3, 0px 0px 28.8px #3effa3;
+}
+
+/* Styles for gray status chip */
+.statusChip-gray {
+  border: 1px solid rgba(169, 169, 169, 0.25);
+  background: rgba(169, 169, 169, 0.05);
+  color: var(--gray-gray, #a9a9a9);
+  text-shadow: 0px 0px 604.8px #a9a9a9, 0px 0px 28.8px #a9a9a9;
+}

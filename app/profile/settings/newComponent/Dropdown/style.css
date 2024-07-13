@@ -1,0 +1,76 @@
+.InputTitle {
+  font-family: var(--Gilroy);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.41px;
+  text-align: center;
+  color: #fff;
+}
+.react-dropdown-select {
+  margin: 4px 0 2px 0;
+  border: 1px solid rgba(111, 111, 111, 0.25) !important;
+}
+.react-dropdown-select[aria-expanded="true"] {
+  border: 1px solid var(--purple-purple, #d376ff) !important;
+  box-shadow: none !important;
+
+}
+.dropdownDisabled {
+  cursor: not-allowed;
+}
+.dropdownDisabled label {
+  cursor: not-allowed;
+}
+.dropdownDisabled input {
+  cursor: not-allowed;
+}
+.react-dropdown-select .react-dropdown-select-content {
+  font-family: var(--Gilroy);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  height: max-content;
+  padding: 0 11px;
+}
+
+.react-dropdown-select.react-dropdown-select-input {
+  font-family: var(--Gilroy);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  height: 17px;
+  padding: 0 11px;
+}
+.react-dropdown-select .react-dropdown-select-dropdown {
+  background-color: #100a1c;
+  border: none;
+  max-height: 180px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.react-dropdown-select .react-dropdown-select-item {
+  border: none;
+  padding: 10px;
+}
+
+.react-dropdown-select .react-dropdown-select-item:hover {
+  background: linear-gradient(
+    95.1deg,
+    #9349ac 0.08%,
+    rgba(36, 158, 245, 0) 85.94%
+  );
+}
+
+.react-dropdown-select-item-selected {
+  background: linear-gradient(
+    95.1deg,
+    #9349ac 0.08%,
+    rgba(36, 158, 245, 0) 85.94%
+  ) !important;
+  border: none !important;
+}

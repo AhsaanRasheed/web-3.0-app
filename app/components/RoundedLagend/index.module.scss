@@ -1,0 +1,39 @@
+.legend {
+  font-family: Jura;
+
+  .legendItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    min-width: 100px;
+
+    .legendColor {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .legendTitle {
+    color: var(--White-white, #fff);
+    /* Body-1/Medium */
+    font-family: Jura;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    span {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+  }
+}

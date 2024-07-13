@@ -1,0 +1,380 @@
+.modalContainer {
+  display: flex; /* Hide the modal by default */
+  position: fixed; /* Position the modal relative to the viewport */
+  top: 0;
+  left: 88px;
+  /* width: calc(100% - 88px); */
+  width: 100%;
+  height: 100%; /* Full height */
+
+  background: var(--black-black_80, rgba(0, 0, 0, 0.8));
+  backdrop-filter: blur(7.5px);
+  z-index: 60000; /* Set a high z-index to display above other elements */
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  // border-radius: 15px;
+  margin-left: -7px;
+}
+.modalContainer .Modal {
+  // background: var(--gradient-bg-color),
+  //   linear-gradient(0deg, rgba(118, 130, 193, 0.12), rgba(118, 130, 193, 0.12));
+  z-index: 60005;
+  width: 424px;
+  //   width: max-content;
+  padding: 24px;
+  border-radius: 15px;
+  border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+  background: var(
+    --background-content_bg-content_bg-5,
+    rgba(137, 137, 234, 0.05)
+  );
+  backdrop-filter: blur(60px);
+  position: relative;
+  animation: modalOpen 1s forwards;
+  margin-right: 80px;
+}
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    //   visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    //   visibility: visible;
+  }
+}
+.Modal .cross_div {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+}
+
+.Modal .cross_div svg {
+  // position: absolute;
+  // right: 0;
+  min-width: 24px;
+  max-width: 24px;
+  width: 24px;
+  min-height: 24px;
+  max-height: 24px;
+  height: 24px;
+
+  cursor: pointer;
+}
+
+.body {
+  width: 100%;
+}
+.head {
+  width: 100%;
+  padding-bottom: 27px;
+  .title {
+    width: 100%;
+    color: var(--White-white, #fff);
+    text-align: center;
+
+    /* Title-2/Semi-bold */
+    font-family: var(--GilroySemiBold);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 24px */
+  }
+  .subtitle {
+    color: var(--White-white, #fff);
+    text-align: center;
+    margin-top: 8px;
+    /* Body-1/Regular */
+    font-family: var(--Gilroy);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.blnCon {
+  width: 100%;
+  margin: 24px 0;
+
+  .title {
+    color: var(--White-white, #fff);
+    text-align: center;
+    /* Body-1/Regular */
+    font-family: var(--Gilroy);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .bln {
+    color: var(--White-white, #fff);
+    text-align: center;
+    margin-top: 8px;
+    /* Title-1/Medium */
+    font-family: var(--GilroyMed);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    span {
+      background: linear-gradient(90deg, #45d3e8 0%, #23e88a 50%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+.rowCoin {
+  display: flex;
+  justify-content: space-between;
+
+  .tokenCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .logoCon {
+      width: 64px;
+      height: 64px;
+      border-radius: 200px;
+      border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .subtitle {
+      color: var(--White-white, #fff);
+      margin: 8px 0;
+      /* Body-2/medium */
+      font-family: var(--GilroyMed);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 14px */
+    }
+  }
+}
+
+.counterInput {
+  display: flex;
+  width: 110px;
+  padding-left: 16px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  border: 1px solid var(--new_input_stroke, rgba(111, 111, 111, 0.25));
+  background: rgba(255, 255, 255, 0.05);
+  span {
+    /* Body-2/Semi-bold */
+    font-family: var(--GilroySemiBold);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 14px */
+    background: linear-gradient(90deg, #45d3e8 0%, #1eeb7d 105.38%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  input {
+    color: var(--White-white, #fff);
+
+    /* Body-2/Semi-bold */
+    font-family: var(--GilroySemiBold);
+    margin-left: 4px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 14px */
+    width: 33px;
+  }
+  .counterIconDiv {
+    display: flex;
+    width: 24px;
+    height: 42px;
+    padding: 8px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    background: var(
+      --background-content_bg-content_bg-5,
+      rgba(137, 137, 234, 0.05)
+    );
+  }
+}
+.btnCon {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  .button {
+    display: flex;
+    width: 47%;
+    //   padding: 13px 16px;
+    height: 46px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: var(
+      --Button-primary,
+      linear-gradient(
+        180deg,
+        rgba(254, 200, 241, 0.7) -27.89%,
+        rgba(254, 200, 241, 0) 22.31%
+      ),
+      radial-gradient(
+        145.32% 284.44% at 78.66% 71.16%,
+        #602ea6 0%,
+        #c977d6 100%
+      )
+    );
+    background-blend-mode: overlay, normal;
+    color: var(--White-white, #fff);
+    text-align: center;
+
+    /* Body-2/Semi-bold */
+    font-family: var(--GilroySemiBold);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 14px */
+    svg {
+      min-width: 21px;
+      min-height: 21px;
+      // margin-left: 10px;
+    }
+  }
+  .button:hover {
+    background: linear-gradient(
+        180deg,
+        rgba(254, 200, 241, 0.9) -22.92%,
+        rgba(254, 200, 241, 0) 79.14%
+      ),
+      radial-gradient(
+        137.13% 253.39% at 76.68% 66.67%,
+        #602ea6 0%,
+        #c977d6 100%
+      );
+  }
+  .button:active {
+    background: radial-gradient(
+        109.99% 253.12% at 76.68% 66.67%,
+        #602ea6 0%,
+        #c977d6 100%
+      )
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+    background-blend-mode: normal;
+  }
+  .Outlinebutton {
+    padding: 0;
+
+    .body {
+      cursor: pointer;
+
+      // padding: 12px 15px;
+      width: calc(100% - 2.5px);
+      height: calc(100% - 2.5px);
+      background-color: #09090f;
+
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: var(--White-white, #fff);
+      text-align: center;
+
+      /* Body-2/medium */
+      font-family: var(--GilroyMed);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 14px */
+    }
+  }
+}
+
+.belowBln {
+  .head {
+    padding-bottom: 0;
+
+    .subtitle {
+      color: var(--red-red, #ff5e5e);
+    }
+  }
+  .blnCon {
+    .bln {
+      color: var(--red-pale_red, #cd2e54);
+      text-shadow: 0px 0px 604.8px #ff5e5e, 0px 0px 28.8px #ff5e5e;
+
+      span {
+        color: var(--red-pale_red, #cd2e54);
+        text-shadow: 0px 0px 604.8px #ff5e5e, 0px 0px 28.8px #ff5e5e;
+
+        background: #cd2e54;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #cd2e54;
+      }
+    }
+  }
+  .btnCon {
+    .button {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+    .button:hover {
+      opacity: 0.6;
+    }
+    .button:active {
+      opacity: 0.6;
+    }
+    .Outlinebutton {
+      opacity: 1;
+    }
+    .Outlinebutton:hover {
+      opacity: 1;
+    }
+    .Outlinebutton:active {
+      opacity: 1;
+    }
+  }
+  .counterInput {
+    border: 1px solid var(--red-pale_red, #cd2e54);
+  }
+}
+@media screen and (max-width: 1150px) {
+  .modalContainer {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .modalContainer .Modal {
+    min-width: 90dvw;
+
+    width: calc(100dvw - 32px);
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 16px;
+  }
+
+  .ModalBody {
+    width: 100%;
+  }
+}

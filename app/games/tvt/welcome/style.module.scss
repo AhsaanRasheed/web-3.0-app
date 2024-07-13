@@ -1,0 +1,193 @@
+// GilroySemiBold
+// GilroyMed
+// Gilroy
+.welcomeWrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex-shrink: 0;
+
+  .main {
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 24px;
+    border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+
+    /* blur/blur_120 */
+    backdrop-filter: blur(60px);
+    position: relative;
+
+    .lightning1 {
+      width: 509.504px;
+      height: 349.756px;
+      transform: rotate(4.296deg);
+      position: absolute;
+      top: 0px;
+      left: 7%;
+      transform: rotate(0deg);
+    }
+
+    .lightning2 {
+      width: 641.841px;
+      height: 221.429px;
+      transform: rotate(6.447deg);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .contentWrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .ellipse {
+        width: 292.563px;
+        height: 288.078px;
+        border-radius: 292.563px;
+        opacity: 0.3;
+        background: var(
+          --new_accent,
+          linear-gradient(90deg, #45d3e8 0%, #0cf54e 105.38%)
+        );
+        filter: blur(125px);
+        position: absolute;
+        z-index: 1;
+      }
+
+      .content {
+        display: flex;
+        width: 472px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        height: 100%;
+        z-index: 3;
+
+        .title {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+
+          color: var(--White-white, #fff);
+
+          /* Title-2/Semi-bold */
+          font-family: var(--GilroySemiBold);
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100%; /* 24px */
+
+          span {
+            background: linear-gradient(90deg, #45d3e8 22.12%, #22e887 55.46%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            /* Title-2/Semi-bold */
+            font-family: var(--GilroySemiBold);
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+          }
+        }
+
+        p {
+          color: var(--White-white, #fff);
+          text-align: center;
+
+          /* Title-3/Medium */
+          font-family: var(--GilroyMed);
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .button {
+          cursor: pointer;
+          display: flex;
+          padding: 13px 16px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          align-self: stretch;
+          border-radius: 12px;
+          background: var(
+            --Button-primary,
+            linear-gradient(
+              180deg,
+              rgba(254, 200, 241, 0.7) -27.89%,
+              rgba(254, 200, 241, 0) 22.31%
+            ),
+            radial-gradient(
+              145.32% 284.44% at 78.66% 71.16%,
+              #602ea6 0%,
+              #c977d6 100%
+            )
+          );
+          color: var(--White-white, #fff);
+          text-align: center;
+
+          /* Body-2/Semi-bold */
+          font-family: var(--GilroySemiBold);
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100%; /* 14px */
+
+          &:hover {
+            opacity: 0.75;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 786px) {
+    .main {
+      .lightning1 {
+        width: 262.986px;
+        height: 161.818px;
+        transform: rotate(4.5deg);
+        left: -10px;
+        transform: rotate(0deg);
+      }
+
+      .lightning2 {
+        width: 411.723px;
+        height: 142.041px;
+        // transform: rotate(6.447deg);
+        // right: -80px;
+      }
+
+      .contentWrapper {
+        .content {
+          .title {
+            font-size: 20px;
+
+            span {
+              font-size: 20px;
+            }
+          }
+          p {
+            font-size: 16px;
+          }
+          .button {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.info-box {
+  box-shadow: var(--box-shadow-3);
+  transition: box-shadow 0.3s ease-in-out;
+  width: 1062px;
+  min-height: 305px;
+  border-radius: 24px;
+  border: var(--stroke-border);
+  background: var(--gradient-bg-dark);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-box:hover {
+  box-shadow: var(--box-shadow-1);
+  cursor: pointer;
+}
+
+.info-box-content {
+  width: 1014px;
+  min-height: 257px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: auto;
+  gap: 24px;
+  border: 1px solid yellow;
+}
+
+.info-box-title {
+  font-family: "Jura", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--text-color-1);
+  border: 1px solid green;
+}
+
+.info-box-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-box-details {
+  flex: 1;
+  border: 1px solid orange;
+}
+
+.info-box-button {
+  align-self: flex-end;
+  border: 1px solid purple;
+}
+
+@media (max-width: 600px) {
+  .info-box {
+    width: 327px;
+    min-height: 258px;
+  }
+
+  .info-box-content {
+    width: 295px;
+    min-height: 226px;
+    gap: 24px;
+  }
+
+  .info-box-title {
+    font-family: "Jura", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .info-box-inner {
+    flex-direction: column;
+  }
+
+  .info-box-inner button {
+    width: 290px;
+  }
+}
+
+@media (max-width: 375px) {
+  .info-box {
+    width: 270px;
+  }
+
+  .info-box-content {
+    width: 260px;
+  }
+
+  .info-box-inner button {
+    width: 255px;
+  }
+}

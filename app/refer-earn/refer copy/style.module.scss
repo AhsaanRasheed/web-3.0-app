@@ -1,0 +1,234 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  min-height: calc(100dvh - 300px);
+  max-width: 1062px;
+  .upper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    .text_container {
+      display: flex;
+      justify-content: left;
+      align-items: left;
+      flex-direction: column;
+      margin-right: 45px;
+      gap: 8px;
+      position: relative;
+      .colour_blue {
+        color: var(--text-color-4);
+      }
+      .heading_container {
+        display: flex;
+        gap: 16px;
+        .heading {
+          display: flex;
+          align-items: baseline;
+          flex-direction: column;
+        }
+        .info_image {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+  .lower {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin: 0 auto;
+
+    .cards {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+      margin-top: 10px;
+      justify-content: space-between;
+
+      .invitation_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 100% !important;
+        gap: 50px;
+
+        .invitation {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          width: 100% !important;
+
+          .copy_component {
+            margin-top: 5px;
+            width: 100% !important;
+            position: relative;
+            // .copy_container {
+            //   width: 100% !important;
+
+              div {
+                // background: #0a1b39;
+                width: 100% !important;
+                padding: 14px 24px;
+                min-height: 52px;
+                // box-shadow: 0px 4px 16px 0px #0066ff52;
+              }
+            // }
+          }
+        }
+      }
+      .email_button {
+        margin-top: auto;
+      }
+      .QRCodeBox {
+        width: 200px;
+        height: 200px;
+        background: var(--gradient-bg-form-color);
+        border-radius: 24px;
+        border: 1px;
+        box-shadow: 0px 0px 7px 2px #0075ff, 0px 0px 7px 2px #0075ff inset;
+        border: 1px solid #ffffffde;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .QRCode {
+          max-width: 145px;
+          max-height: 145px;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .container {
+    align-items: center;
+
+    .upper {
+      flex-direction: column;
+      gap: 15px;
+
+      .text_container {
+        width: 100%;
+        gap: 10px;
+        margin-right: 0px;
+
+        .heading_text {
+          font-weight: 600px;
+        }
+        .info {
+          margin-top: 15px;
+        }
+      }
+    }
+
+    .lower {
+      .cards {
+        flex-direction: column;
+        // align-items: center;
+
+        .invitation_container {
+          .invitation {
+            padding: 0 0px;
+          }
+        }
+      }
+    }
+  }
+}
+// Modal S
+.AddFriendEmailModal {
+  min-height: 600px;
+  height: max-content;
+  max-height: 705px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  justify-content: space-between;
+}
+.center_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form {
+  width: max-content;
+}
+.form .inputBox {
+  height: 106px;
+  width: 100%;
+  max-width: 373px;
+  position: relative;
+}
+
+.Modalcontent {
+  width: 431px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.emailsBox {
+  max-height: 206px;
+  height: 206px;
+  max-width: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+.emailtag {
+  background-color: #050e1d;
+  height: 26px;
+  width: max-content;
+  padding: 4px;
+  border-radius: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.emailtag label {
+  margin-right: 5px;
+}
+@media (max-width: 1100px) {
+  .AddFriendEmailModal {
+    min-height: max-content;
+    height: max-content;
+    max-height: 633px;
+    width: 100%;
+    padding-top: 10px;
+  }
+  .Modalcontent {
+    width: 100%;
+  }
+  .emailsBox {
+    height: max-content;
+    max-height: 170px;
+    margin-top: 15px;
+  }
+  .btnCover {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+// Modal E

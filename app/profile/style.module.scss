@@ -1,0 +1,287 @@
+.component_container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1065px;
+  min-height: calc(100dvh - 290px);
+}
+
+.card {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0px 0px 7px 2px #0075ff, 0px 0px 7px 2px #0075ff inset;
+  border: 1px solid #ffffffde;
+  background: var(--gradient-bg-form-color);
+  padding: 24px;
+}
+
+.cardBody {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+.cardBody .infoSide {
+  // flex-grow: 0.7;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  
+}
+.cardBody .verification {
+  height: 143px !important;
+}
+.cardBody .securitySigninBody {
+  height: 220px !important;
+}
+.cardBody .infoSide .row {
+  display: flex;
+  flex-direction: row;
+  // height: 52px;
+  align-items: center;
+  width: 100%;
+}
+.cardBody .infoSide .securitySigninRow{
+  align-items:start;
+  // height: 52px;
+
+}
+.cardBody .infoSide .row .type {
+  min-width: 150px;
+}
+.cardBody .infoSide .row .type label {
+  color: var(--primary-Neutrals-medium-color);
+}
+.cardBody .infoSide .row .content {
+
+  width: 192px;
+  max-width: 192px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height:24px;
+}
+.cardBody .infoSide .row .content label{
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cardBody .infoSide .row .securitySignin{
+  max-width: 100%;
+  height: max-content;
+}
+.cardBody .btnSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 185px;
+  width: 185px;
+}
+
+@media (max-width: 768px) {
+  .component_container {
+    
+    min-height: max-content;
+  }
+  .cardBody {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .cardBody .infoSide {
+    min-height: 105px;
+    height: max-content;
+    width: 100%;
+  }
+  .cardBody .infoSide .row {
+    //  margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .cardBody .infoSide .row .type {
+    min-width: 100px;
+  }
+  .cardBody .infoSide .row .content {
+    width: calc(100% - 100px);
+  }
+  .cardBody .btnSide {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .cardBody .infoSide .securitySigninRow{
+    flex-direction: column;
+  }
+  .cardBody .infoSide .row .securitySignin{
+    width: 100%;
+  }
+  .cardBody .securitySigninBody {
+    height: max-content !important;
+  }
+}
+
+// Activity
+.ActivityTopRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tbl_history {
+  width: 100%;
+  height: 130px;
+  max-height: 125px;
+  overflow-y: scroll;
+  margin-top: 22px;
+}
+.tbl_history .tbl_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 46px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-right: 10px;
+}
+
+.tbl_history .tbl_row .tbl_row_data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 46px;
+  width: max-content;
+}
+.tbl_history .tbl_row .tbl_row_data .icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.tbl_history .tbl_row .tbl_row_data .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // height: 46px;
+  height: 100%;
+}
+.infoBar {
+  // background: var();
+  background: linear-gradient(
+    90.1deg,
+    rgba(36, 158, 245, 0.33) 0.08%,
+    rgba(36, 158, 245, 0) 85.94%
+  );
+  // height: 53px;
+  height: max-content;
+  // padding: 16px 24px 16px 24px;
+  border-radius: 2px 16px 16px 2px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 16px 24px 16px 24px;
+}
+.infoBar .bar {
+  width: 4px;
+  height: 100%;
+  border-radius: 2px 0px 0px 2px;
+  background: #d9d9d9;
+  box-shadow: 0px 0px 10.600000381469727px 4px #0075ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.infoBar .txt {
+  // min-height: 53px;
+  max-height: max-content;
+}
+@media (max-width: 768px) {
+  .tbl_history {
+    max-height: max-content;
+    height: max-content;
+    overflow-y: auto;
+  }
+  .tbl_history .tbl_row{
+    padding-right: 0;
+  }
+  .tbl_history .tbl_row .tbl_row_data{
+    height: max-content;
+  }
+  .infoBar {
+    margin-bottom: 20px;
+  }
+}
+// Activity Ends
+
+
+// Scurity Starts
+// Modal S
+.center_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form {
+  width: 100%;
+}
+.form .inputBox {
+  height: 106px;
+  position: relative;
+}
+
+.Modalcontent{
+  width: 431px;
+  display: flex;
+}
+
+
+
+.ModalcontentSetting{
+  width: 954px;
+}
+.ModalcontentSetting .SettingInfoForm{
+padding: 5px 10px;
+}
+.ModalcontentSetting .SettingInfoForm .FormRow{
+  display: flex;
+  justify-content: space-between;
+}
+.ModalcontentSetting .SettingInfoForm .FormRow .FormCol{
+width: 50%;
+max-width: 431px;
+}
+.ModalcontentSetting .SettingInfoForm .FormRow .FormCol .inputBox{
+  max-width: 431px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .Modalcontent{
+    width: 100%;
+  } 
+  .ModalcontentSetting .SettingInfoForm .FormRow{
+    flex-direction: column;
+  }
+  .ModalcontentSetting .SettingInfoForm .FormRow .FormCol{
+    width: 100%;
+    max-width: 100%;
+    }
+    .ModalcontentSetting .SettingInfoForm .FormRow .FormCol .inputBox{
+      max-width: 100%;
+      width: 100%;
+    }
+}
+
+// Modal E
+
+// Security Ends

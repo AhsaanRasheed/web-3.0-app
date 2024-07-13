@@ -1,0 +1,176 @@
+.mainCardCustom {
+  position: relative;
+  border-radius: 25px;
+  border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+  /* blur/blur_120 */
+  // backdrop-filter: blur(60px);
+  padding: 24px;
+}
+.button {
+  display: flex;
+  width: 100%;
+  //   padding: 13px 16px;
+  height: 42px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: var(
+    --BTN-Background,
+    linear-gradient(
+      180deg,
+      rgba(254, 200, 241, 0.9) -22.92%,
+      rgba(254, 200, 241, 0) 26.73%
+    ),
+    radial-gradient(137.13% 253.39% at 76.68% 66.67%, #602ea6 0%, #c977d6 100%)
+  );
+  background-blend-mode: overlay, normal;
+  color: var(--White-white, #fff);
+  text-align: center;
+
+  font-family: var(--Gilroy);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.button:hover {
+  background: linear-gradient(
+      180deg,
+      rgba(254, 200, 241, 0.9) -22.92%,
+      rgba(254, 200, 241, 0) 79.14%
+    ),
+    radial-gradient(137.13% 253.39% at 76.68% 66.67%, #602ea6 0%, #c977d6 100%);
+}
+.button:active {
+  background: radial-gradient(
+      109.99% 253.12% at 76.68% 66.67%,
+      #602ea6 0%,
+      #c977d6 100%
+    )
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+  background-blend-mode: normal;
+}
+
+.InputTxtNew {
+  width: 100%;
+  height: 86px;
+  margin-bottom: 6px;
+
+  .InputTitle {
+    font-family: var(--Gilroy);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.41px;
+    text-align: center;
+    color: #fff;
+  }
+  .inputCon {
+    display: flex;
+    align-items: center;
+    margin: 4px 0 4px 0;
+    justify-content: space-between;
+    width: 100%;
+    height: 45px;
+    padding: 13px 16px 13px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--new_input_stroke, rgba(111, 111, 111, 0.25));
+
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+
+    // background: transparent;
+    input {
+      background: transparent;
+      //styleName: Body-2/Semi-bold;
+      width: 100%;
+      font-family: var(--Gilroy);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17.15px;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+      // background: rgba(255, 255, 255, 0.05);
+
+    }
+    input::placeholder {
+      color: var(--White-white_50, rgba(255, 255, 255, 0.50));
+
+      /* Body-2/Semi-bold */
+      font-family: var(--GilroySemiBold);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 14px */
+      opacity: 1; /* Firefox */
+    }    
+  }
+  .inputConFouce {
+    border: 1px solid var(--new_input_stroke, #d376ff) !important;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .PwdErrorCard0 {
+    position: absolute;
+    left: 98%;
+    width: 297px;
+    border-radius: 16px;
+    padding: 10px 24px;
+    border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+    background: #1d1a2e;
+    /* blur/blur_120 */
+    // backdrop-filter: blur(120px);
+    z-index: 50;
+    label {
+      color: var(--White-white, #fff);
+
+      /* Body 3 */
+      font-family: var(--Gilroy);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 21px */
+    }
+    .lirow {
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+      svg {
+        margin-right: 8px;
+      }
+    }
+  }
+  .inputConError {
+    border-color: rgba(255, 94, 94, 1);
+    border-radius: 12px;
+    border: 1px solid var(--danger-red_danger, #FF5E5E);
+    background: var(--White-white_5, rgba(255, 255, 255, 0.05));
+    box-shadow: 0px 0px 15px 0px rgba(229, 48, 48, 0.07);
+  }
+  .errorLbl {
+    color: rgba(255, 94, 94, 1);
+    //styleName: Body-2/medium;
+    font-family: var(--Gilroy);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 13px;
+    text-align: center;
+  }
+}
+.Mobbutton{
+  display: none;
+}
+@media (max-width: 768px) {
+  .mainCardCustom {
+    padding: 16px;
+  }
+  .Deskbutton{
+    display: none;
+  }
+  .Mobbutton{
+    display: flex;
+  }
+}

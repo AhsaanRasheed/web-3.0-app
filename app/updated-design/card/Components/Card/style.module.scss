@@ -1,0 +1,58 @@
+.info_card {
+  height: 489px;
+  .card_item {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 15px;
+
+    .upper_container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .image_container {
+        align-self: flex-start;
+        width: 56px;
+        height: 56px;
+      }
+    }
+
+    .children {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 16px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .info_card {
+    width: 320px;
+    height: 120px;
+    transition: height 0.3s ease;
+    .lower_container {
+      display: none;
+    }
+    &.expanded {
+      height: 470px; // Height when the card is expanded
+      .lower_container {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .card_item {
+      margin: 10px 20px;
+
+      justify-content: space-between;
+      .upper_container {
+        flex-direction: row;
+      }
+      .box {
+        label {
+          display: none;
+        }
+      }
+    }
+  }
+}

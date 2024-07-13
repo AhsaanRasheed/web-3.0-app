@@ -1,0 +1,117 @@
+.dropdownContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 42px;
+    .dropdown {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 42px;
+      cursor: pointer;
+      label {
+        cursor: pointer;
+      }
+      svg {
+        cursor: pointer;
+        transform: scaleY(1);
+        transition: transform 300ms ease;
+      }
+      .selectedArrow{
+        transform: scaleY(-1);
+  
+      }
+      .dropmenu {
+        position: absolute;
+        z-index: 100000000;
+        // background-color: #1e2536;
+        // background: rgba(28, 35, 52, 0.85);
+        // background: #1C2334;
+        background-color: rgb(30, 37, 54);
+  
+        //   display: flex;
+        display: none;
+        flex-direction: column;
+        top: 110%;
+        //   left: 0;
+        // padding-top: 10px;
+        border-radius: 16px;
+        overflow: hidden;
+        .li {
+          padding: 8px 20px;
+          width: 100%;
+          min-width: max-content;
+          // width: max-content;
+          cursor: pointer;
+          label {
+            cursor: pointer;
+          }
+        }
+        .selected {
+          // background-color: #1c364a;
+          // background: rgba(28, 35, 52, 0.85);
+          // background: #1C2334;
+          // background: rgba(18, 101, 128, 0.25);
+          // background: #12658040;
+          background-color: rgb(26, 53, 72);
+        }
+        .li:hover {
+          // background-color: #353b4b;
+          // background: #FFFFFF1A;
+          background-color: rgb(53, 58, 76);
+        }
+        .li_disable {
+          cursor: not-allowed;
+          label {
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  
+    .dropdownOpen {
+      .dropmenu {
+        display: flex;
+        animation: dropAnimation 0.3s ease-out;
+      }
+    }
+    .dropdownClose {
+      .dropmenu {
+        display: flex;
+  
+        animation: closeAnimation 0.3s ease-out;
+        animation-fill-mode: forwards;
+      }
+    }
+   
+  }
+  @keyframes arrowAnimation {
+    from {
+      transform: scaleY(1);
+    }
+    to {
+      transform: scaleY(-1);
+    }
+  }
+  @keyframes dropAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes closeAnimation {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+      display: none;
+    }
+  }
+  

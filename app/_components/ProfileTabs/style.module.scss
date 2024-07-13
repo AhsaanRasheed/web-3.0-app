@@ -1,0 +1,133 @@
+.wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.tabs {
+  position: relative;
+  margin: 3rem 0;
+  height: 14.75rem;
+  background: var(--gradient-bg-dark);
+}
+.tabs::before,
+.tabs::after {
+  content: "";
+  display: table;
+}
+.tabs::after {
+  clear: both;
+}
+.tab {
+  float: left;
+  margin-right: 15px;
+}
+.tab-switch {
+  display: none;
+}
+.tab-label {
+  position: relative;
+  display: block;
+  line-height: 2.75em;
+  height: 3em;
+  padding: 0 1.618em;
+  border-right: 0.125rem solid #16a085;
+  color: #fff;
+  cursor: pointer;
+  top: 0;
+  transition: all 0.25s;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.tab-label:hover {
+  top: -0.25rem;
+  transition: top 0.25s;
+}
+.tab-content {
+  height: 12rem;
+  position: absolute;
+  z-index: 1;
+  top: 2.75em;
+  left: 0;
+  padding: 1.618rem;
+  color: #2c3e50;
+  opacity: 0;
+  transition: all 0.35s;
+}
+.tab-switch:checked + .tab-label {
+  color: #2c3e50;
+  border-bottom: 0;
+  border-right: 0.125rem solid #fff;
+  transition: all 0.35s;
+  z-index: 1;
+  top: -0.0625rem;
+}
+.tab-switch:checked + label + .tab-content {
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.35s;
+}
+
+// .warpper {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   width: 100%;
+
+//   .tab {
+//     cursor: pointer;
+//     padding: 10px 40px;
+//     margin: 0px 15px;
+//     display: inline-block;
+//     color: #fff;
+//     border-radius: 15px 15px 0px 0px;
+//     box-shadow: 0 0.5rem 0.8rem #00000080;
+//     background: var(--primary-color);
+//   }
+
+//   .panels {
+//     background: #fff;
+//     box-shadow: 0 2rem 2rem #00000080;
+//     background: var(--primary-color);
+//     min-height: 200px;
+//     width: 100%;
+//     max-width: 500px;
+//     border-radius: 3px;
+//     overflow: hidden;
+//     padding: 20px;
+//   }
+//   .panel {
+//     display: none;
+//     animation: fadein 0.8s;
+//   }
+// }
+
+// @keyframes fadein {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+// .panel-title {
+//   font-size: 1.5em;
+//   font-weight: bold;
+// }
+
+// .radio {
+//   display: none;
+// }
+// #one:checked + .panels #one-panel,
+// #two:checked + .panels #two-panel,
+// #three:checked + .panels #three-panel {
+//   display: block;
+// }
+
+// #one:checked + .tabs #one-tab,
+// #two:checked + .tabs #two-tab,
+// #three:checked + .tabs #three-tab {
+//   background: #fff;
+//   color: #000;
+//   border-top: 3px solid #32557f;
+// }

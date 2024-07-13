@@ -1,0 +1,99 @@
+.info_card {
+  width: 338px;
+  height: 261px;
+  .card_item {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .centered {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+  &.checkedCard {
+    background-color: #004168;
+  }
+}
+
+.color_white_40 {
+  color: var(--primary-Neutrals-default-color) !important;
+  opacity: 0.4;
+}
+
+@media (max-width: 1375px) {
+  .info_card {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    .card_item {
+      width: 90%;
+      height: 80%;
+      margin: 10px 5%;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .text {
+        gap: 0px;
+        flex-grow: 1;
+        .centered {
+          flex-direction: row;
+          align-items: baseline;
+          gap: 8px;
+        }
+        .centered_column {
+          flex-direction: column;
+          gap: 0px;
+        }
+      }
+      .box {
+        label {
+          display: none;
+        }
+      }
+    }
+    .status {
+      display: none;
+    }
+    &.expanded {
+      height: 180px;
+      .card_item {
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 36px;
+        .text {
+          justify-content: space-between;
+          flex-direction: row;
+          width: 100%;
+          .centered {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0px;
+          }
+          .centered_column {
+            flex-direction: column;
+            align-items: flex-end !important;
+          }
+        }
+        .box {
+          label {
+            display: block;
+          }
+        }
+      }
+      .status {
+        display: flex;
+      }
+    }
+  }
+}

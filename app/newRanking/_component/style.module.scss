@@ -1,0 +1,56 @@
+.InputTxtNew {
+  width: 293px;
+  height: 40px;
+
+  .InputTitle {
+    font-family: var(--GilroyMed);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.41px;
+    text-align: center;
+    color: #fff;
+  }
+  .inputCon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    padding: 13px 16px 13px 16px;
+    border-radius: 12px;
+    border: 2px solid var(--new_input_stroke, rgba(111, 111, 111, 0.25));
+    position: relative;
+
+    input {
+      background: transparent;
+      //styleName: Body-2/Semi-bold;
+      width: 100%;
+      font-family: var(--Gilroy);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17.15px;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+    }
+    input::placeholder {
+      color: var(--White-white_50, rgba(255, 255, 255, 0.5));
+
+      /* Body-2/Semi-bold */
+      font-family: var(--GilroyMed);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 14px */
+      opacity: 1; /* Firefox */
+    }
+  }
+  .inputConFouce {
+    border: 1px solid var(--new_input_stroke, #d376ff) !important;
+  }
+}
+@media (max-width: 768px) {
+  .InputTxtNew {
+    width: 220px;
+    height: 40px;
+  }
+}
